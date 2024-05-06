@@ -5,6 +5,7 @@ import CarouselCard from "./CarouselCard";
 import EarlyLife from "../images/early-life.png";
 import CollegeLife from "../images/college-life.png";
 import MargaretThompsonLarge from "../images/m-thompson-large.png";
+import BettyRollin from "../images/betty-rollins.png";
 import CareerAndCommunity from "../images/career-and-community.png";
 
 import "react-multi-carousel/lib/styles.css";
@@ -155,81 +156,15 @@ const Demo = () => {
     };
   }, [deviceType]);
 
-  // const responsive = {
-  //   desktop: {
-  //     breakpoint: { max: 3000, min: 1024 },
-  //     items: 3,
-  //   },
-  //   tablet: {
-  //     breakpoint: { max: 1024, min: 464 },
-  //     items: 2,
-  //     slidesToSlide: 2,
-  //   },
-  //   mobile: {
-  //     breakpoint: { max: 464, min: 0 },
-  //     items: 1,
-  //     slidesToSlide: 1,
-  //   },
-  // };
-
   return (
     <div className="homepage">
-      <header className="header">
-        <nav className="navbar" ref={headingRef}>
-          <ul className="nav-list">
-            <button
-              onClick={goToHome}
-              style={{
-                fontFamily: "Palatino Linotype, serif",
-                fontWeight: "bold",
-                fontSize: "32px",
-                border: "transparent",
-                backgroundColor: "transparent",
-              }}
-            >
-              Virgil
-            </button>
-            <button
-              onClick={goToHome}
-              style={{
-                fontFamily: "Open Sans, sans-serif",
-                fontSize: "20px",
-                border: "transparent",
-                backgroundColor: "transparent",
-              }}
-            >
-              How it Works
-            </button>
-            <button
-              onClick={goToHome}
-              style={{
-                fontFamily: "Open Sans, sans-serif",
-                fontSize: "20px",
-                border: "transparent",
-                backgroundColor: "transparent",
-              }}
-            >
-              What's Included
-            </button>
-            <button
-              onClick={goToHome}
-              style={{
-                fontFamily: "Open Sans, sans-serif",
-                fontSize: "20px",
-                border: "transparent",
-                backgroundColor: "transparent",
-              }}
-            >
-              Explore Demo
-            </button>
-          </ul>
-          <ul className="nav-waitlist">
-            <button onClick={goToWaitList} className="nav-link-waitlist">
-              Join Waitlist
-            </button>
-          </ul>
-        </nav>
-      </header>
+      <div className="banner" ref={headingRef}>
+        You're viewing a demo of our digital memoir.{" "}
+        <a href="/" className="link">
+          Return to main site
+        </a>{" "}
+        to start your own journey.
+      </div>
       <main className="main-content">
         <div className="overall-heading-container">
           <div className="heading-text-container">
@@ -268,7 +203,7 @@ const Demo = () => {
             </div>
           </div>
           <img
-            src={MargaretThompsonLarge}
+            src={BettyRollin}
             alt="Black and white of Betty Rollins"
             style={{}}
           />
