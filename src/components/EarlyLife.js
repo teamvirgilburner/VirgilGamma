@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactPlayer from 'react-player';
 import { useNavigate } from "react-router-dom";
-// import MargaretThompsonLarge from "../images/m-thompson-large.png";
-// import IthacaImage from "../images/ithaca.jpg";
-// import ChildrenPlaying from "../images/playing.jpg";
-import Chapter1Video from "../images/chapter1.mp4";
-// import theaterAndDramaticsBig from "../images/theater-and-dramatics-big.png";
+
+import MargaretThompsonLarge from "../images/m-thompson-large.png";
+import IthacaImage from "../images/ithaca.jpg";
+import ChildrenPlaying from "../images/playing.jpg";
+import theaterAndDramaticsBig from "../images/theater-and-dramatics-big.png";
+import grammarAndWriting from "../images/grammar-and-writing.png";
 import ballet1 from "../images/ballet1.png";
 import ballet2 from "../images/ballet2.png";
 import theaterAndDramatics from "../images/theater-and-dramatics.png";
-import writingAndGrammer from "../images/writing-and-grammar.png";
 import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -382,7 +382,7 @@ const EarlyLife = () => {
                             </div>
                           </div>
                           <div className="gray-box-image-container">
-                            <img src={writingAndGrammer} alt="Down arrow" />
+                            <img src={grammarAndWriting} alt="Down arrow" />
                           </div>
                         </div>
                         <button

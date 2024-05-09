@@ -1,22 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import LifeChapters from "./LifeChapters";
+import CarouselCard from "./CarouselCard";
 // import MargaretThompson from "../images/margaret-thompson.png";
-import EarlyLife from "../images/early-life.png";
-import CollegeLife from "../images/college-life.png";
-import MargaretThompsonLarge from "../images/m-thompson-large.png";
-import BettyRollin from "../images/betty-rollins.png";
-import CareerAndCommunity from "../images/career-and-community.png";
-// import c1 from "../images/carousel_images/c1.png";
-// import c2 from "../images/carousel_images/c2.png";
-// import c3 from "../images/carousel_images/c3.png";
-// import c4 from "../images/carousel_images/c4.png";
-// import c5 from "../images/carousel_images/c5.png";
-// import c6 from "../images/carousel_images/c6.png";
-// import c7 from "../images/carousel_images/c7.png";
-// // import MargaretThompsonLarge from "../images/m-thompson-large.png"
-// import bettyHeadshot from "../images/betty_headshot.png";
-// >>>>>>> main
+import c1 from "../images/carousel_images/c1.png";
+import c2 from "../images/carousel_images/c2.png";
+import c3 from "../images/carousel_images/c3.png";
+import c4 from "../images/carousel_images/c4.png";
+import c5 from "../images/carousel_images/c5.png";
+import c6 from "../images/carousel_images/c6.png";
+import c7 from "../images/carousel_images/c7.png";
+// import MargaretThompsonLarge from "../images/m-thompson-large.png"
+import bettyHeadshot from "../images/betty_headshot.png";
 
 import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
@@ -24,7 +18,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Demo.css";
 
-const Demo = () => {
+const LifeChapters = () => {
   const headingRef = useRef(null);
 
   const navigate = useNavigate();
@@ -214,46 +208,42 @@ const Demo = () => {
   }, [deviceType]);
 
   return (
-    <div className="homepage">
-      <div className="banner" ref={headingRef}>
+    <div className="life-chapters-container">
+      <h1 style={{ marginBottom: "30px" }}>Life Chapters</h1>
 
-        You're viewing a demo of our digital memoir.{" "}
-        <a href="/" className="link">
-          Return to main site
-        </a>{" "}
-        to start your own journey.
-      </div>
-      <main className="main-content">
-        <div className="white-box-holder">
-          <div className="tabs">
-            <button onClick={() => showContent("LifeChapters")}>
-              Life Chapters
-            </button>
-            <button onClick={() => showContent("FamilyTree")}>
-              Family Tree
-            </button>
-            <button onClick={() => showContent("Places")}>Places</button>
-            <button onClick={() => showContent("LifeChapters")}>
-              Favorites
-            </button>
-            <button onClick={() => showContent("LifeChapters")}>Gallery</button>
-          </div>
-
-          {currentTab === "LifeChapters" && <LifeChapters />}
-          {currentTab === "FamilyTree" && (
-            <div id="FamilyTree">Content for Family Tree</div>
-          )}
-          {currentTab === "Places" && <div id="Places">Content for Places</div>}
-          {currentTab === "Favorites" && (
-            <div id="Places">Content for Places</div>
-          )}
-          {currentTab === "Gallery" && (
-            <div id="Places">Content for Places</div>
-          )}
+      <div className="carousel-container">
+        <div
+          style={{
+            width: "80%",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          <Slider {...settings}>
+            {items.map((item, index) => {
+              const isCenter = index === activeIndex; // Determine if this slide is the center slide
+              return (
+                <div
+                  className={`item ${isCenter ? "center" : ""}`}
+                  key={item.id}
+                >
+                  <CarouselCard
+                    years={item.years}
+                    imageUrl={item.imageUrl}
+                    title={item.title}
+                    items={item.features}
+                    isCenter={isCenter}
+                    buttonText={item.buttonText}
+                    goto={item.goto}
+                  />
+                </div>
+              );
+            })}
+          </Slider>
         </div>
-      </main>
+      </div>
     </div>
   );
 };
 
-export default Demo;
+export default LifeChapters;
