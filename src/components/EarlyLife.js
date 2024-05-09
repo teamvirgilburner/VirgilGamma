@@ -64,6 +64,14 @@ const EarlyLife = () => {
     );
   };
 
+  const [playing, setPlaying] = useState(false);
+  const [overlayVisible, setOverlayVisible] = useState(true);
+
+  const handleVideoStart = () => {
+    setPlaying(true);
+    setOverlayVisible(false);
+  };
+
   const styling = {
     color: "black",
   };
@@ -136,11 +144,49 @@ const EarlyLife = () => {
               <div class="video-container">
                 <ReactPlayer
                   className='react-player fixed-bottom'
+                  playing={playing}
                   url={Chapter1Video}
                   width='100%'
                   height='80%'
                   controls={true}
+                  config={{ file: { attributes: {
+                    autoPlay: false,
+                    muted: false
+                  }}}}
                 />
+                {overlayVisible && (
+                  <div 
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      background: 'rgba(0, 0, 0, 0.5)',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      color: 'white',
+                      fontSize: '24px',
+                      cursor: 'pointer'
+                    }}
+                    onClick={handleVideoStart}
+                  >
+                    <div>
+                    <span>This is a sample of a Life Chapter in a Vault. </span>
+                    <br></br>
+                    <br></br>
+                    <span>In each Chapter, you will find a video interview of your loved one, 
+                      as well as additional content about their life and experiences during this period.</span>
+                    <br></br>
+                    <br></br>
+                    <span>This content is uploaded by your family, as well as automatically retrieved from historical archives and databases.</span>
+                    <br></br>
+                    <br></br>
+                    <span>Click anywhere on the screen to begin your discovery!</span>
+                    </div>
+                  </div>
+                )}
               </div>
               <div className="family-container">
                 <div className="family-heading">Family Background</div>
