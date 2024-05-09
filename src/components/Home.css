@@ -272,6 +272,7 @@ button.cta-button {
   flex: 1;
   padding: 20px;
   margin: 20px;
+  width: 50%;
   text-align: left;
   border: 2px solid rgb(222, 218, 218);
   border-radius: 10px;
@@ -368,6 +369,13 @@ button.cta-button {
   transition: background-color 0.3s ease;
 }
 
+.test {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .nav-link-waitlist {
   font-size: 16px;
   font-weight: bold;
@@ -387,6 +395,7 @@ button.cta-button {
 }
 
 .waitlist-holder {
+  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-between; /* Adjusts space between children */

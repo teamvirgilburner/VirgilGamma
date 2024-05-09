@@ -1,21 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  Link,
-  // Button,
-  Element,
-  // Events,
-  // animateScroll as scroll,
-  // scrollSpy,
-} from "react-scroll";
-
+import { Link, Element } from "react-scroll";
 
 import { firestore } from "../firebase";
-// import { addDoc, collection} from "@firebase/firestore";
 import { addDoc, collection } from "firebase/firestore";
 
-// import whatsIncludedBg from "../images/whats-included-bg.png";
-import whatsIncludedBigBg from "../images/whats-included-big-bg.png";
 import downArrow from "../images/down-arrow.png";
 import leftMacbook from "../images/left.png";
 import rightMacbook from "../images/right.png";
@@ -29,7 +18,6 @@ import "./Home.css"; // Assume you have corresponding CSS for styling
 import { toast, ToastContainer } from "react-toastify";
 
 function Home() {
-
   const ref = collection(firestore, "waitlist_data");
 
   const navigate = useNavigate();
@@ -75,22 +63,22 @@ function Home() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  
+
     let data = {
       email: email,
       name: fullName,
       phone: phoneNumber,
       subject: subject,
       motivation: motivation,
-      source: heardFrom
+      source: heardFrom,
     };
-    
+
     console.log(data);
 
     try {
-      addDoc(ref, data)
+      addDoc(ref, data);
     } catch (event) {
-      console.log(event)
+      console.log(event);
     }
     // toast.success("Thank you for your interest! We'll notify you when capacity becomes available.", {
     //   position: "bottom-center"
@@ -98,11 +86,14 @@ function Home() {
     toast.success(
       <div>
         Thank you for your interest!
-        <br/><br/>
+        <br />
+        <br />
         We'll notify you when capacity becomes available.
-      </div>, {
-      position: "bottom-center"
-    });
+      </div>,
+      {
+        position: "bottom-center",
+      }
+    );
   };
 
   return (
@@ -239,10 +230,7 @@ function Home() {
                 <div className="feature-explanation">
                   {" "}
                   <h1 className="number-circle"> 03</h1>
-                  <h1 className="feature-title">
-                    {" "}
-                    Receive Your Virgil Vault{" "}
-                  </h1>
+                  <h1 className="feature-title"> Receive Your Virgil Vault </h1>
                   <p>
                     Virgil organizes your loved one’s story into a beautiful,
                     interactive video memoir preserving their unique voice and
@@ -258,7 +246,7 @@ function Home() {
           className="centered-flexbox"
           id="waitlist"
         >
-          <div style={{ width: "80%" }}>
+          <div className="test" style={{ width: "80%" }}>
             <h1
               style={{
                 fontSize: "48px",
@@ -273,72 +261,6 @@ function Home() {
               What's Included
             </h1>
             <div className="waitlist-holder">
-              <div
-                className="virgil-vault"
-                style={{
-                  backgroundImage: `url(${whatsIncludedBigBg})`,
-                  backgroundSize: "cover cover", // Cover ensures the background covers the whole area
-                  backgroundPosition: "center", // Center the image within the element
-                  backgroundRepeat: "no-repeat",
-                }}
-              >
-                <div className="virgil-vault-holder">
-                  <div className="virgil-vault-header-holder">
-                    <div className="virgil-vault-header">
-                      <h1 style={{ fontSize: "24px" }}>Virgil Vault</h1>
-                      <p>For your loved one</p>
-                      <h1
-                        clasName="virgil-vault-price"
-                        style={{ fontSize: "36px", marginTop: "30px" }}
-                      >
-                        $3950
-                      </h1>
-                    </div>
-                  </div>
-                  <div className="virgil-vault-includes">
-                    <h3>Includes:</h3>
-
-                    <ul>
-                      <li>
-                        Virgil Vault — an interactive archive that merges their
-                        voice with photos, videos, and more
-                      </li>
-                      <br></br>
-                      <li>
-                        10 hours of conversational interviews — enough to
-                        capture their entire life story!
-                      </li>
-                      <br></br>
-                      <li>High-fidelity audio and video recordings</li>
-                      <br></br>
-
-                      <li>
-                        Searchable video library to easily find specific
-                        memories
-                      </li>
-                      <br></br>
-
-                      <li>
-                        A personal historian who will guide your family through
-                        the entire process
-                      </li>
-                      <br></br>
-
-                      <li>Safe, secure, and private to you and your family</li>
-                      <br></br>
-
-                      <li>Shareable and downloadable</li>
-                    </ul>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    {/* <button type="submit" className="waitlist-button">
-                      Schedule a Consultation
-                    </button> */}
-                  </div>
-                </div>
-              </div>
               <div
                 className="waitlist-form-container"
                 style={{ paddingTop: "20px" }}
@@ -401,13 +323,18 @@ function Home() {
                     </label>
                     <label>
                       How did you hear about us?
-                      <select value = {heardFrom} onChange = {handleChangeDiscovery}> 
+                      <select
+                        value={heardFrom}
+                        onChange={handleChangeDiscovery}
+                      >
                         <option selected value=""></option>
                         <option value="reddit">Reddit</option>
                         <option value="facebook">Facebook/Instagram</option>
                         <option value="email">E-mail</option>
                         <option value="friend/family">Friend/Family</option>
-                        <option value="seniorliving">Senior Living Facility</option>
+                        <option value="seniorliving">
+                          Senior Living Facility
+                        </option>
                         <option value="other">Other</option>
                       </select>
                     </label>
@@ -419,7 +346,11 @@ function Home() {
                     <br></br>
                     <br></br>
                     <span> Questions? Feel free to send us a message! </span>
-                    <p><a href="mailto: contact@virgil.bio">contact@virgil.bio</a></p>
+                    <p>
+                      <a href="mailto: contact@virgil.bio">
+                        contact@virgil.bio
+                      </a>
+                    </p>
                   </form>
                 </div>
               </div>
@@ -466,10 +397,10 @@ function Home() {
       </main>
       <ToastContainer
         toastStyle={{
-          fontSize: '24px',
-          padding: '20px',
-          minHeight: '100px',
-          width: "500px"
+          fontSize: "24px",
+          padding: "20px",
+          minHeight: "100px",
+          width: "500px",
         }}
       />
     </div>
