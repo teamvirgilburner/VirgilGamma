@@ -7,6 +7,16 @@ import CollegeLife from "../images/college-life.png";
 import MargaretThompsonLarge from "../images/m-thompson-large.png";
 import BettyRollin from "../images/betty-rollins.png";
 import CareerAndCommunity from "../images/career-and-community.png";
+// import c1 from "../images/carousel_images/c1.png";
+// import c2 from "../images/carousel_images/c2.png";
+// import c3 from "../images/carousel_images/c3.png";
+// import c4 from "../images/carousel_images/c4.png";
+// import c5 from "../images/carousel_images/c5.png";
+// import c6 from "../images/carousel_images/c6.png";
+// import c7 from "../images/carousel_images/c7.png";
+// // import MargaretThompsonLarge from "../images/m-thompson-large.png"
+// import bettyHeadshot from "../images/betty_headshot.png";
+// >>>>>>> main
 
 import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
@@ -18,15 +28,6 @@ const Demo = () => {
   const headingRef = useRef(null);
 
   const navigate = useNavigate();
-
-  const goToHome = () => {
-    navigate("/home");
-  };
-
-  const goToWaitList = () => {
-    navigate("/home#waitlist");
-    // Any other actions that do not depend on navigation completion
-  };
 
   function SampleNextArrow(props) {
     const { className, onClick } = props;
@@ -64,7 +65,7 @@ const Demo = () => {
     initialSlide: 1,
     centerMode: true,
     infinite: false,
-    centerPadding: "60px",
+    centerPadding: "25px",
     slidesToShow: 3,
     speed: 500,
     arrows: true,
@@ -83,44 +84,100 @@ const Demo = () => {
     },
     {
       id: 1,
-      imageUrl: EarlyLife,
-      years: "1938-1956",
+      imageUrl: c1,
+      years: "1938-1948",
       title: "Early Life in Ithaca",
-      features: ["My Best Friends", "A Vibrant Community", "A Strange Family"],
+      features: [
+        "Family Background",
+        "Mother's Influence",
+        "Extracurricular Beginnings",
+      ],
       buttonText: "Learn More",
       goto: goToEarlyLife,
     },
     {
       id: 2,
-      imageUrl: CollegeLife,
-      years: "1957-1961",
-      title: "College Years",
+      imageUrl: c2,
+      years: "1949-1954",
+      title: "Education & | Teenage Years",
       features: [
-        "Studying English Literature",
-        "Sorority life",
-        "First relationship",
+        "Advanced Studies",
+        "Cultural and Social Development",
+        "Develeping Independence",
       ],
       buttonText: "Coming Soon!",
       // goto: goToCollegeYears,
     },
     {
       id: 3,
-      imageUrl: CareerAndCommunity,
-      years: "1961-1970",
-      title: "Career & Community",
-      features: ["Teaching high school", "Volunteering with gardening"],
+      imageUrl: c3,
+      years: "1955-1960",
+      title: "Early Career & Acting",
+      features: [
+        "Beginning as an Actress",
+        "Realization and Shifts",
+        "Transition to Writing",
+      ],
       buttonText: "Coming Soon!",
       // goto: goToCareerCommunity,
     },
     {
       id: 4,
+      imageUrl: c4,
+      years: "1961-1970",
+      title: "Professional | Writing Career",
+      features: [
+        "Entry into journalism",
+        "Skills Development",
+        "Recognition and Setbacks",
+      ],
+      buttonText: "Coming Soon!",
+    },
+    {
+      id: 5,
+      imageUrl: c5,
+      years: "1971-1980",
+      title: "TV Journalism & | Greatest Challenges",
+      features: [
+        "Shift to Television",
+        "Battle with Breast Cancer",
+        "Authorship",
+      ],
+      buttonText: "Coming Soon!",
+    },
+    {
+      id: 6,
+      imageUrl: c6,
+      years: "1981-2000",
+      title: "Later Career & Advocacy",
+      features: [
+        "Continued Writing and TV Career",
+        "Family and Personal Life",
+        "New Advocacy Efforts",
+      ],
+      buttonText: "Coming Soon!",
+    },
+    {
+      id: 7,
+      imageUrl: c7,
+      years: "2001-Present",
+      title: "Reflection & Legacy",
+      features: [
+        "Reflecting on Life Lessons",
+        "Loss and Coping",
+        "Ongoing Advocacy",
+      ],
+      buttonText: "Coming Soon!",
+    },
+    {
+      id: 8,
       imageUrl: "",
       years: "",
       title: "",
       features: [],
     },
     {
-      id: 0,
+      id: 9,
       imageUrl: "",
       years: "",
       title: "",
@@ -159,6 +216,7 @@ const Demo = () => {
   return (
     <div className="homepage">
       <div className="banner" ref={headingRef}>
+
         You're viewing a demo of our digital memoir.{" "}
         <a href="/" className="link">
           Return to main site
@@ -178,7 +236,7 @@ const Demo = () => {
               style={{ backgroundColor: "white" }}
             >
               <p>
-                Betty's life story is a testment to the impact one individual
+                Betty's life story is a testament to the impact one individual
                 can have on their community and family. Her dedication to
                 education, love for the arts, and commitment to community
                 service left a lasting legacy.
@@ -192,13 +250,13 @@ const Demo = () => {
                 <span style={{ fontWeight: "bold" }}>Age:</span> 85 years old
               </p>
               <p>
-                <span style={{ fontWeight: "bold" }}>Spouse:</span> Thomas
-                Thompson
+                <span style={{ fontWeight: "bold" }}>Spouse:</span> Harold
+                Edwards
               </p>
               <p>
                 <br></br>
                 Proudly sponsored by Mary Thompson, with contributions from the
-                Rollins family.
+                Rollin family.
               </p>
             </div>
           </div>

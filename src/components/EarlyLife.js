@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
+import ReactPlayer from 'react-player';
 import { useNavigate } from "react-router-dom";
+
 import MargaretThompsonLarge from "../images/m-thompson-large.png";
 import IthacaImage from "../images/ithaca.jpg";
 import ChildrenPlaying from "../images/playing.jpg";
@@ -17,6 +19,7 @@ import makeupClasses from "../images/makeup-classes-on-fifth-avenue.png";
 import iceCream from "../images/ice-cream-at-addie-valens.png";
 import myContentedFather from "../images/my-contented-father.png";
 import grewUpInLincolnPark from "../images/grew-up-in-lincoln-park.png";
+import footerVideo from "../images/chapter1_bottom.mov";
 
 import "./IndividualDemoPage.css";
 
@@ -25,7 +28,7 @@ const EarlyLife = () => {
   const [isWritingAndGrammarOpen, setIsWritingAndGrammarOpen] = useState(false);
   const [isTheaterOpen, setIsTheaterOpen] = useState(false);
 
-  const [selectedValue, setSelectedValue] = useState("Ballet Classes");
+  // const [selectedValue, setSelectedValue] = useState("Ballet Classes");
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
@@ -33,10 +36,10 @@ const EarlyLife = () => {
     setIsWritingAndGrammarOpen(!isWritingAndGrammarOpen);
   const toggleDropdownTheater = () => setIsTheaterOpen(!isTheaterOpen);
 
-  const handleOptionClick = (value) => {
-    setSelectedValue(value);
-    setIsOpen(false);
-  };
+  // const handleOptionClick = (value) => {
+  //   setSelectedValue(value);
+  //   setIsOpen(false);
+  // };
 
   const headingRef = useRef(null);
   const navigate = useNavigate();
@@ -59,6 +62,14 @@ const EarlyLife = () => {
         hello
       </div>
     );
+  };
+
+  const [playing, setPlaying] = useState(false);
+  const [overlayVisible, setOverlayVisible] = useState(true);
+
+  const handleVideoStart = () => {
+    setPlaying(true);
+    setOverlayVisible(false);
   };
 
   const styling = {
@@ -131,22 +142,58 @@ const EarlyLife = () => {
               style={{ maxWidth: "1120px", margin: "0 auto" }}
             >
               <div class="video-container">
-                <iframe
-                  title="youtube"
-                  width="1120"
-                  height="630"
-                  src="https://www.youtube.com/embed/jkn9HcVPJJE?start=13&autoplay=1&mute=0"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+                <ReactPlayer
+                  className='react-player fixed-bottom'
+                  playing={playing}
+                  url={Chapter1Video}
+                  width='100%'
+                  height='80%'
+                  controls={true}
+                  config={{ file: { attributes: {
+                    autoPlay: false,
+                    muted: false
+                  }}}}
+                />
+                {overlayVisible && (
+                  <div 
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      background: 'rgba(0, 0, 0, 0.5)',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      color: 'white',
+                      fontSize: '24px',
+                      cursor: 'pointer'
+                    }}
+                    onClick={handleVideoStart}
+                  >
+                    <div>
+                    <span>This is a sample of a Life Chapter in a Vault. </span>
+                    <br></br>
+                    <br></br>
+                    <span>In each Chapter, you will find a video interview of your loved one, 
+                      as well as additional content about their life and experiences during this period.</span>
+                    <br></br>
+                    <br></br>
+                    <span>This content is uploaded by your family, as well as automatically retrieved from historical archives and databases.</span>
+                    <br></br>
+                    <br></br>
+                    <span>Click anywhere on the screen to begin your discovery!</span>
+                    </div>
+                  </div>
+                )}
               </div>
               <div className="family-container">
                 <div className="family-heading">Family Background</div>
                 <div className="family-content">
                   Betty grew up in Lincoln Park, a suburb of Yonkers. She was an
-                  only child with a Ukrainian father who adored American and an
-                  ambitious mother who was always striving for more
+                  only child with a Ukrainian father who adored America and an
+                  ambitious mother who was always striving for more.
                 </div>
               </div>
               <div className="carousel-container">
@@ -209,7 +256,7 @@ const EarlyLife = () => {
                 <div className="family-heading">Mother's Influence</div>
                 <div className="family-content">
                   Her mother was a significant influence, pushing her towards
-                  numerous educational and extracurricualr activities to ensure
+                  numerous educational and extracurricular activities to ensure
                   she had every possible advantage.
                 </div>
               </div>
@@ -235,9 +282,9 @@ const EarlyLife = () => {
                             </div>
                             <div className="gray-box-content">
                               {" "}
-                              Every Saturday, I attended ballet class with a
+                              Every Saturday, Betty attended ballet class with a
                               teacher who, as a Christian Scientist, ignored
-                              pain. There, I learned not just to dance but to
+                              pain. There, she learned not just to dance but to
                               embody discipline and grace under pressure.{" "}
                             </div>
                           </div>
@@ -331,7 +378,7 @@ const EarlyLife = () => {
                               Under the strict but nurturing guidance of
                               seasoned editors, she learned to refine her voice
                               and embrace the vulnerability in her
-                              storytelling..{" "}
+                              storytelling.{" "}
                             </div>
                           </div>
                           <div className="gray-box-image-container">
@@ -362,15 +409,13 @@ const EarlyLife = () => {
               </div>
 
               <div class="video-container">
-                <iframe
-                  title="youtube"
-                  width="1120"
-                  height="630"
-                  src="https://www.youtube.com/embed/jkn9HcVPJJE?start=13&autoplay=1&mute=0"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+                <ReactPlayer
+                    className='react-player fixed-bottom'
+                    url={footerVideo}
+                    width='100%'
+                    height='80%'
+                    controls={true}
+                  />
                 <div className="video-description">
                   Video uploaded by Aunt Deborah Edwards.
                 </div>
@@ -380,7 +425,7 @@ const EarlyLife = () => {
                 className="nav-link-waitlist"
                 style={{ margin: "50px 30px" }}
               >
-                Back to life chapters
+                Back to Life Chapters
               </button>
             </div>
           </div>
