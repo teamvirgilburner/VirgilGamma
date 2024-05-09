@@ -2,15 +2,21 @@ import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import CarouselCard from "./CarouselCard";
 // import MargaretThompson from "../images/margaret-thompson.png";
-import c1 from "../images/carousel_images/c1.png";
-import c2 from "../images/carousel_images/c2.png";
-import c3 from "../images/carousel_images/c3.png";
-import c4 from "../images/carousel_images/c4.png";
-import c5 from "../images/carousel_images/c5.png";
-import c6 from "../images/carousel_images/c6.png";
-import c7 from "../images/carousel_images/c7.png";
-// import MargaretThompsonLarge from "../images/m-thompson-large.png"
-import bettyHeadshot from "../images/betty_headshot.png";
+import EarlyLife from "../images/early-life.png";
+import CollegeLife from "../images/college-life.png";
+import MargaretThompsonLarge from "../images/m-thompson-large.png";
+import BettyRollin from "../images/betty-rollins.png";
+import CareerAndCommunity from "../images/career-and-community.png";
+// import c1 from "../images/carousel_images/c1.png";
+// import c2 from "../images/carousel_images/c2.png";
+// import c3 from "../images/carousel_images/c3.png";
+// import c4 from "../images/carousel_images/c4.png";
+// import c5 from "../images/carousel_images/c5.png";
+// import c6 from "../images/carousel_images/c6.png";
+// import c7 from "../images/carousel_images/c7.png";
+// // import MargaretThompsonLarge from "../images/m-thompson-large.png"
+// import bettyHeadshot from "../images/betty_headshot.png";
+// >>>>>>> main
 
 import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
@@ -207,27 +213,11 @@ const Demo = () => {
     };
   }, [deviceType]);
 
-  // const responsive = {
-  //   desktop: {
-  //     breakpoint: { max: 3000, min: 1024 },
-  //     items: 3,
-  //   },
-  //   tablet: {
-  //     breakpoint: { max: 1024, min: 464 },
-  //     items: 2,
-  //     slidesToSlide: 2,
-  //   },
-  //   mobile: {
-  //     breakpoint: { max: 464, min: 0 },
-  //     items: 1,
-  //     slidesToSlide: 1,
-  //   },
-  // };
-
   return (
     <div className="homepage">
       <div className="banner" ref={headingRef}>
-        You're viewing a demo of our digital memoir feature.{" "}
+
+        You're viewing a demo of our digital memoir.{" "}
         <a href="/" className="link">
           Return to main site
         </a>{" "}
@@ -271,8 +261,8 @@ const Demo = () => {
             </div>
           </div>
           <img
-            src={bettyHeadshot}
-            alt="Black and white of Betty Rollin"
+            src={BettyRollin}
+            alt="Black and white of Betty Rollins"
             style={{}}
           />
         </div>
