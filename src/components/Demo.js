@@ -246,7 +246,7 @@ const Demo = () => {
               style={{ backgroundColor: "white" }}
             >
               <p>
-                Betty's life story is a testment to the impact one individual
+                Betty's life story is a testament to the impact one individual
                 can have on their community and family. Her dedication to
                 education, love for the arts, and commitment to community
                 service left a lasting legacy.
