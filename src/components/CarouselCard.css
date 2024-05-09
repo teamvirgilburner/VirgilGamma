@@ -77,6 +77,19 @@ h3 {
   border-color: transparent;
   width: 80%;
   margin-bottom: 10px;
+  padding: 5px;
+  position: relative;
+}
+
+.coming-soon {
+  background-color: #dcdcdc;
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+  font-size: 16px;
+  border-color: transparent;
+  width: 80%;
+  margin-bottom: 10px;
+  padding: 5px;
   position: relative;
 }
 
