@@ -129,9 +129,16 @@ function Home() {
             <Link to="join-our-waitlist" className="nav-link">
               What's Included
             </Link>
-            <Link to="explore-demo" className="nav-link">
-              Explore Demo
-            </Link>
+            <button
+              className="nav-link"
+              onClick={goToDemo}
+              style={{
+                backgroundColor: "transparent",
+                borderColor: "transparent",
+              }}
+            >
+              Try it out
+            </button>
           </ul>
           <ul className="nav-waitlist">
             <Link to="join-our-waitlist" className="nav-link-waitlist">
@@ -156,11 +163,11 @@ function Home() {
               </p>
               <div className="about-us-buttons-container">
                 <Link
-                  to="join-our-waitlist"
+                  to="explore-demo"
                   className="cta-button"
                   style={{ backgroundColor: "#FFDE62" }}
                 >
-                  Join Our Waitlist
+                  Try our demo
                 </Link>
               </div>
               <div className="about-us-scroll">
