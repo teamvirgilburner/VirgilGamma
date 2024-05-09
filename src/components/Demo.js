@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import LifeChapters from "./LifeChapters";
-// import MargaretThompson from "../images/margaret-thompson.png";
 import c1 from "../images/carousel_images/c1.png";
 import c2 from "../images/carousel_images/c2.png";
 import c3 from "../images/carousel_images/c3.png";
@@ -9,11 +8,8 @@ import c4 from "../images/carousel_images/c4.png";
 import c5 from "../images/carousel_images/c5.png";
 import c6 from "../images/carousel_images/c6.png";
 import c7 from "../images/carousel_images/c7.png";
-// import MargaretThompsonLarge from "../images/m-thompson-large.png"
-import bettyHeadshot from "../images/betty_headshot.png";
 
 import "react-multi-carousel/lib/styles.css";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Demo.css";
@@ -92,7 +88,6 @@ const Demo = () => {
         "Develeping Independence",
       ],
       buttonText: "Coming Soon!",
-      // goto: goToCollegeYears,
     },
     {
       id: 3,
@@ -105,7 +100,6 @@ const Demo = () => {
         "Transition to Writing",
       ],
       buttonText: "Coming Soon!",
-      // goto: goToCareerCommunity,
     },
     {
       id: 4,
@@ -175,7 +169,7 @@ const Demo = () => {
 
   const [deviceType, setDeviceType] = useState("desktop");
 
-  const [currentTab, setCurrentTab] = useState("");
+  const [currentTab, setCurrentTab] = useState("LifeChapters");
 
   function showContent(tabName) {
     if (currentTab !== tabName) {
@@ -208,7 +202,7 @@ const Demo = () => {
   }, [deviceType]);
 
   return (
-    <div className="homepage">
+    <div className="demo-page">
       <div className="banner" ref={headingRef}>
         You're viewing a demo of our digital memoir feature.{" "}
         <a href="/" className="link">
@@ -218,18 +212,39 @@ const Demo = () => {
       </div>
       <main className="main-content">
         <div className="white-box-holder">
-          <div className="tabs">
-            <button onClick={() => showContent("LifeChapters")}>
-              Life Chapters
-            </button>
-            <button onClick={() => showContent("FamilyTree")}>
-              Family Tree
-            </button>
-            <button onClick={() => showContent("Places")}>Places</button>
-            <button onClick={() => showContent("LifeChapters")}>
-              Favorites
-            </button>
-            <button onClick={() => showContent("LifeChapters")}>Gallery</button>
+          <div className="tabs-holder">
+            <div className="tabs">
+              <button
+                onClick={() => showContent("LifeChapters")}
+                className="tab-button"
+              >
+                Life Chapters
+              </button>
+              <button
+                onClick={() => showContent("FamilyTree")}
+                className="tab-button"
+              >
+                Family Tree
+              </button>
+              <button
+                onClick={() => showContent("Places")}
+                className="tab-button"
+              >
+                Places
+              </button>
+              <button
+                onClick={() => showContent("LifeChapters")}
+                className="tab-button"
+              >
+                Favorites
+              </button>
+              <button
+                onClick={() => showContent("LifeChapters")}
+                className="tab-button"
+              >
+                Gallery
+              </button>
+            </div>
           </div>
 
           {currentTab === "LifeChapters" && <LifeChapters />}
