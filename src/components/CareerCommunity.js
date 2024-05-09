@@ -10,6 +10,47 @@ import "./IndividualDemoPage.css";
 const CareerCommunity = () => {
   const headingRef = useRef(null);
 
+  // const navigate = useNavigate();
+
+  // const goToHome = () => {
+  //   navigate("/home");
+  // };
+
+  // function SampleNextArrow(props) {
+  //   const { className, onClick } = props;
+  //   return (
+  //     <div className={className} style={{ ...styling }} onClick={onClick} />
+  //   );
+  // }
+
+  // const SamplePrevArrow2 = (props) => {
+  //   const { className, onClick } = props;
+  //   return (
+  //     <div className={className} onClick={onClick} style={{ ...styling }}>
+  //       hello
+  //     </div>
+  //   );
+  // };
+
+  // const styling = {
+  //   color: "black",
+  // };
+
+  // const settings = {
+  //   initialSlide: 1,
+  //   centerMode: true,
+  //   infinite: false,
+  //   centerPadding: "60px",
+  //   slidesToShow: 3,
+  //   speed: 500,
+  //   arrows: true,
+  //   nextArrow: <SampleNextArrow />,
+  //   prevArrow: <SamplePrevArrow2 />,
+  //   beforeChange: (current, next) => setActiveIndex(next), // Update active index on slide change
+  // };
+
+  // const [activeIndex, setActiveIndex] = useState(1);
+
   const [deviceType, setDeviceType] = useState("desktop");
 
   useEffect(() => {
