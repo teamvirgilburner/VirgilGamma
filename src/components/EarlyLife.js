@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactPlayer from 'react-player';
 import { useNavigate } from "react-router-dom";
-// import MargaretThompsonLarge from "../images/m-thompson-large.png";
-// import IthacaImage from "../images/ithaca.jpg";
-// import ChildrenPlaying from "../images/playing.jpg";
-import Chapter1Video from "../images/chapter1.mp4";
-// import theaterAndDramaticsBig from "../images/theater-and-dramatics-big.png";
+
+import MargaretThompsonLarge from "../images/m-thompson-large.png";
+import IthacaImage from "../images/ithaca.jpg";
+import ChildrenPlaying from "../images/playing.jpg";
+import theaterAndDramaticsBig from "../images/theater-and-dramatics-big.png";
+import grammarAndWriting from "../images/grammar-and-writing.png";
 import ballet1 from "../images/ballet1.png";
 import ballet2 from "../images/ballet2.png";
 import theaterAndDramatics from "../images/theater-and-dramatics.png";
-import writingAndGrammer from "../images/writing-and-grammar.png";
 import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -62,6 +62,14 @@ const EarlyLife = () => {
         hello
       </div>
     );
+  };
+
+  const [playing, setPlaying] = useState(false);
+  const [overlayVisible, setOverlayVisible] = useState(true);
+
+  const handleVideoStart = () => {
+    setPlaying(true);
+    setOverlayVisible(false);
   };
 
   const styling = {
@@ -136,11 +144,49 @@ const EarlyLife = () => {
               <div class="video-container">
                 <ReactPlayer
                   className='react-player fixed-bottom'
+                  playing={playing}
                   url={Chapter1Video}
                   width='100%'
                   height='80%'
                   controls={true}
+                  config={{ file: { attributes: {
+                    autoPlay: false,
+                    muted: false
+                  }}}}
                 />
+                {overlayVisible && (
+                  <div 
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      background: 'rgba(0, 0, 0, 0.5)',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      color: 'white',
+                      fontSize: '24px',
+                      cursor: 'pointer'
+                    }}
+                    onClick={handleVideoStart}
+                  >
+                    <div>
+                    <span>This is a sample of a Life Chapter in a Vault. </span>
+                    <br></br>
+                    <br></br>
+                    <span>In each Chapter, you will find a video interview of your loved one, 
+                      as well as additional content about their life and experiences during this period.</span>
+                    <br></br>
+                    <br></br>
+                    <span>This content is uploaded by your family, as well as automatically retrieved from historical archives and databases.</span>
+                    <br></br>
+                    <br></br>
+                    <span>Click anywhere on the screen to begin your discovery!</span>
+                    </div>
+                  </div>
+                )}
               </div>
               <div className="family-container">
                 <div className="family-heading">Family Background</div>
@@ -336,7 +382,7 @@ const EarlyLife = () => {
                             </div>
                           </div>
                           <div className="gray-box-image-container">
-                            <img src={writingAndGrammer} alt="Down arrow" />
+                            <img src={grammarAndWriting} alt="Down arrow" />
                           </div>
                         </div>
                         <button
