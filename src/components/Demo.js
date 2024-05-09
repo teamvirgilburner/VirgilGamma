@@ -204,7 +204,7 @@ const Demo = () => {
   return (
     <div className="demo-page">
       <div className="banner" ref={headingRef}>
-        You're viewing a demo of our digital memoir feature.{" "}
+        You're viewing a demo of our digital memoir.{" "}
         <a href="/" className="link">
           Return to main site
         </a>{" "}
