@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import CarouselCard from "./CarouselCard";
-import LifeChapters from "./LifeChapters";
 // import MargaretThompson from "../images/margaret-thompson.png";
 import c1 from "../images/carousel_images/c1.png";
 import c2 from "../images/carousel_images/c2.png";
@@ -43,6 +42,14 @@ const Demo = () => {
   const goToEarlyLife = () => {
     navigate("/early-life");
   };
+
+  // const goToCollegeYears = () => {
+  //   navigate("/college-years");
+  // };
+
+  // const goToCareerCommunity = () => {
+  //   navigate("/career-community");
+  // };
 
   const styling = {
     color: "black",
@@ -176,14 +183,6 @@ const Demo = () => {
 
   const [deviceType, setDeviceType] = useState("desktop");
 
-  const [currentTab, setCurrentTab] = useState("");
-
-  function showContent(tabName) {
-    if (currentTab !== tabName) {
-      setCurrentTab(tabName);
-    }
-  }
-
   useEffect(() => {
     if (headingRef.current) {
       headingRef.current.scrollIntoView({ behavior: "smooth" });
@@ -208,6 +207,23 @@ const Demo = () => {
     };
   }, [deviceType]);
 
+  // const responsive = {
+  //   desktop: {
+  //     breakpoint: { max: 3000, min: 1024 },
+  //     items: 3,
+  //   },
+  //   tablet: {
+  //     breakpoint: { max: 1024, min: 464 },
+  //     items: 2,
+  //     slidesToSlide: 2,
+  //   },
+  //   mobile: {
+  //     breakpoint: { max: 464, min: 0 },
+  //     items: 1,
+  //     slidesToSlide: 1,
+  //   },
+  // };
+
   return (
     <div className="homepage">
       <div className="banner" ref={headingRef}>
@@ -218,32 +234,82 @@ const Demo = () => {
         to start your own journey.
       </div>
       <main className="main-content">
-        <div className="white-box-holder">
-          <div className="tabs">
-            <button onClick={() => showContent("LifeChapters")}>
-              Life Chapters
-            </button>
-            <button onClick={() => showContent("FamilyTree")}>
-              Family Tree
-            </button>
-            <button onClick={() => showContent("Places")}>Places</button>
-            <button onClick={() => showContent("LifeChapters")}>
-              Favorites
-            </button>
-            <button onClick={() => showContent("LifeChapters")}>Gallery</button>
-          </div>
+        <div className="overall-heading-container">
+          <div className="heading-text-container">
+            <div className="heading-title-container">
+              <div className="sub-heading"> The Life of </div>
+              <h1 className="main-heading"> Betty </h1>
+              <h1 className="main-heading"> Rollin </h1>
+            </div>
+            <div
+              className="heading-content-container"
+              style={{ backgroundColor: "white" }}
+            >
+              <p>
+                Betty's life story is a testament to the impact one individual
+                can have on their community and family. Her dedication to
+                education, love for the arts, and commitment to community
+                service left a lasting legacy.
+              </p>
+              <br></br>
 
-          {currentTab === "LifeChapters" && <LifeChapters />}
-          {currentTab === "FamilyTree" && (
-            <div id="FamilyTree">Content for Family Tree</div>
-          )}
-          {currentTab === "Places" && <div id="Places">Content for Places</div>}
-          {currentTab === "Favorites" && (
-            <div id="Places">Content for Places</div>
-          )}
-          {currentTab === "Gallery" && (
-            <div id="Places">Content for Places</div>
-          )}
+              <p>
+                <span style={{ fontWeight: "bold" }}>Born:</span> July 15, 1938
+              </p>
+              <p>
+                <span style={{ fontWeight: "bold" }}>Age:</span> 85 years old
+              </p>
+              <p>
+                <span style={{ fontWeight: "bold" }}>Spouse:</span> Harold
+                Edwards
+              </p>
+              <p>
+                <br></br>
+                Proudly sponsored by Mary Thompson, with contributions from the
+                Rollin family.
+              </p>
+            </div>
+          </div>
+          <img
+            src={bettyHeadshot}
+            alt="Black and white of Betty Rollin"
+            style={{}}
+          />
+        </div>
+        <div className="life-chapters-container">
+          <h1 style={{ marginBottom: "30px" }}>Life Chapters</h1>
+
+          <div className="carousel-container">
+            <div
+              style={{
+                width: "80%",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
+              <Slider {...settings}>
+                {items.map((item, index) => {
+                  const isCenter = index === activeIndex; // Determine if this slide is the center slide
+                  return (
+                    <div
+                      className={`item ${isCenter ? "center" : ""}`}
+                      key={item.id}
+                    >
+                      <CarouselCard
+                        years={item.years}
+                        imageUrl={item.imageUrl}
+                        title={item.title}
+                        items={item.features}
+                        isCenter={isCenter}
+                        buttonText={item.buttonText}
+                        goto={item.goto}
+                      />
+                    </div>
+                  );
+                })}
+              </Slider>
+            </div>
+          </div>
         </div>
       </main>
     </div>
