@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import CarouselCard from "./CarouselCard";
 import LifeChapters from "./LifeChapters";
 // import MargaretThompson from "../images/margaret-thompson.png";
 import c1 from "../images/carousel_images/c1.png";

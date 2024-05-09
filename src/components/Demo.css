@@ -74,6 +74,10 @@
   box-sizing: border-box;
 }
 
+.white-box-holder {
+  background-color: white;
+}
+
 .main-content {
   padding: 0;
   margin-top: 40px;
