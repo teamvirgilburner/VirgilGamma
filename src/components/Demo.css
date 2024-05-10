@@ -80,6 +80,12 @@
   border-color: transparent;
   font-weight: bolder;
   margin-top: 15px;
+  line-height: 1.5; /* Adjusts the height of lines in the button, can help with alignment */
+}
+
+.tab-button .material-symbols-outlined {
+  vertical-align: middle; /* Align the bottom of the icon with the baseline of the text */
+  margin-right: 8px; /* Optional: adds some space between the icon and the text */
 }
 
 .tabs {
