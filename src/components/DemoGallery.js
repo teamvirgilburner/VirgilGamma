@@ -15,15 +15,15 @@ const DemoGallery = () => {
   return (
     <div className="overall-image-holder">
       <div className="vertical-image-holder">
-        <img src={leftTop} alt="rightMacbook" />
+        <img src={leftTop} alt="rightMacbook" className="top-image" />
         <img src={leftBottom} alt="rightMacbook" />
       </div>
       <div className="vertical-image-holder">
-        <img src={middleTop} alt="rightMacbook" />
+        <img src={middleTop} alt="rightMacbook" className="top-image" />
         <img src={middleBottom} alt="rightMacbook" />
       </div>
       <div className="vertical-image-holder">
-        <img src={rightTop} alt="rightMacbook" />
+        <img src={rightTop} alt="rightMacbook" className="top-image" />
         <img src={rightBottom} alt="rightMacbook" />
       </div>
     </div>
