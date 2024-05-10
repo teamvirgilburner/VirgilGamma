@@ -10,6 +10,8 @@ import c4 from "../images/carousel_images/c4.png";
 import c5 from "../images/carousel_images/c5.png";
 import c6 from "../images/carousel_images/c6.png";
 import c7 from "../images/carousel_images/c7.png";
+import DemoGallery from "./DemoGallery";
+import DemoFamilyTreeBigger from "../images/demo-family-tree-bigger.png";
 
 import "react-multi-carousel/lib/styles.css";
 import "slick-carousel/slick/slick.css";
@@ -251,13 +253,18 @@ const Demo = () => {
 
           {currentTab === "LifeChapters" && <LifeChapters />}
           {currentTab === "FamilyTree" && (
-            <div id="FamilyTree">Content for Family Tree</div>
+            <img
+              className="family-tree-photo"
+              src={DemoFamilyTreeBigger}
+              alt="rightMacbook"
+            />
           )}
-          {currentTab === "Places" && <Places/>}
-          {currentTab === "Favorites" && <Favorites/>}
-          {currentTab === "Gallery" && (
-            <div id="Places">Content for Gallery</div>
+          {currentTab === "Places" && <div id="Places">Content for Places</div>}
+          {currentTab === "Favorites" && (
+            <div id="Places">Content for Places</div>
           )}
+          {currentTab === "Gallery" && <DemoGallery />}
+
         </div>
       </main>
     </div>

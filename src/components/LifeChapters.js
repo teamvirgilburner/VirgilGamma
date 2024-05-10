@@ -209,12 +209,10 @@ const LifeChapters = () => {
 
   return (
     <div className="life-chapters-container">
-      <h1 style={{ marginBottom: "30px" }}>Life Chapters</h1>
-
       <div className="carousel-container">
         <div
           style={{
-            width: "80%",
+            width: "100%",
             marginLeft: "auto",
             marginRight: "auto",
           }}
