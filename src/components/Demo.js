@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import LifeChapters from "./LifeChapters";
+import Places from "./Places";
+import Favorites from "./Favorites";
 import c1 from "../images/carousel_images/c1.png";
 import c2 from "../images/carousel_images/c2.png";
 import c3 from "../images/carousel_images/c3.png";
@@ -233,13 +235,13 @@ const Demo = () => {
                 Places
               </button>
               <button
-                onClick={() => showContent("LifeChapters")}
+                onClick={() => showContent("Favorites")}
                 className="tab-button"
               >
                 Favorites
               </button>
               <button
-                onClick={() => showContent("LifeChapters")}
+                onClick={() => showContent("Gallery")}
                 className="tab-button"
               >
                 Gallery
@@ -251,12 +253,10 @@ const Demo = () => {
           {currentTab === "FamilyTree" && (
             <div id="FamilyTree">Content for Family Tree</div>
           )}
-          {currentTab === "Places" && <div id="Places">Content for Places</div>}
-          {currentTab === "Favorites" && (
-            <div id="Places">Content for Places</div>
-          )}
+          {currentTab === "Places" && <Places/>}
+          {currentTab === "Favorites" && <Favorites/>}
           {currentTab === "Gallery" && (
-            <div id="Places">Content for Places</div>
+            <div id="Places">Content for Gallery</div>
           )}
         </div>
       </main>
