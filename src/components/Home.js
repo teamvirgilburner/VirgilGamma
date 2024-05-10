@@ -1,24 +1,17 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  Link,
-  // Button,
-  Element,
-  // Events,
-  // animateScroll as scroll,
-  // scrollSpy,
-} from "react-scroll";
+import { Link, Element } from "react-scroll";
+import VirgilVoyage from "./VirgilVoyage";
 
 import { firestore } from "../firebase";
-// import { addDoc, collection} from "@firebase/firestore";
 import { addDoc, collection } from "firebase/firestore";
+import VirgilVaultImage from "../images/the-virgil-vault.png";
 
-// import whatsIncludedBg from "../images/whats-included-bg.png";
 import whatsIncludedBigBg from "../images/whats-included-big-bg.png";
 import downArrow from "../images/down-arrow.png";
+import newLandingImage from "../images/new-landing-image.png";
 import leftMacbook from "../images/left.png";
 import rightMacbook from "../images/right.png";
-import grouped from "../images/grouped.png";
 import bigElipse from "../images/big-ellipse.png";
 import contributeMemories from "../images/contribute-memories.png";
 import completeInterviews from "../images/complete-interviews.png";
@@ -152,10 +145,9 @@ function Home() {
           <div className="about-us-flex-container">
             <section className="about-us-text-container">
               <h1 style={{ fontSize: "48px", marginBottom: "20px" }}>
-                Preserve your <span className="gradient-text">loved one's</span>
+                Your parents can't live forever.
                 <br />
-                legacy. One <span className="gradient-text">memory</span> at a
-                time.
+                But their <span className="gradient-text">story</span> can.
               </h1>
               <p className="feature-description">
                 The Virgil Vault is a digital biography that preserves your
@@ -163,11 +155,21 @@ function Home() {
               </p>
               <div className="about-us-buttons-container">
                 <Link
-                  to="explore-demo"
+                  to="join-our-waitlist"
                   className="cta-button"
                   style={{ backgroundColor: "#FFDE62" }}
                 >
-                  Try our demo
+                  Join Our Waitlist
+                </Link>
+                <Link
+                  to="explore-demo"
+                  className="cta-button"
+                  style={{
+                    backgroundColor: "transparent",
+                    border: "2px solid #FFA500",
+                  }}
+                >
+                  Explore demo
                 </Link>
               </div>
               <div className="about-us-scroll">
@@ -178,8 +180,78 @@ function Home() {
               </div>
             </section>
 
-            <div className="image-container">
-              <img src={grouped} alt="Elderly couple" />
+            <img
+              src={newLandingImage}
+              alt="Grouped landing image"
+              style={{ width: "40%", height: "auto" }}
+            />
+          </div>
+        </Element>
+        <Element
+          name="the-virgil-voyage"
+          className="centered-flexbox"
+          id="waitlist"
+        >
+          <div style={{ width: "80%" }}>
+            <h1
+              style={{
+                fontSize: "48px",
+                backgroundImage: `url(${bigElipse})`,
+                backgroundSize: "contain", // Cover ensures the background covers the whole area
+                backgroundPosition: "center", // Center the image within the element
+                backgroundRepeat: "no-repeat", // The image will not tile
+                width: "100%",
+                height: "auto",
+              }}
+            >
+              The Virgil Voyage
+            </h1>
+            <p className="voyage-description">
+              How we capture your loved one's story
+            </p>
+            <div className="virgil-voyage-holder">
+              <VirgilVoyage />
+            </div>
+          </div>
+        </Element>
+        <Element
+          name="the-virgil-vault"
+          className="centered-flexbox"
+          id="waitlist"
+        >
+          <div style={{ width: "80%" }}>
+            <h1
+              style={{
+                fontSize: "48px",
+                backgroundImage: `url(${bigElipse})`,
+                backgroundSize: "contain", // Cover ensures the background covers the whole area
+                backgroundPosition: "center", // Center the image within the element
+                backgroundRepeat: "no-repeat", // The image will not tile
+                width: "100%",
+                height: "auto",
+              }}
+            >
+              The Virgil Vault
+            </h1>
+            <p className="voyage-description">
+              How we preserve their story for generations to come
+            </p>
+            <div className="about-us-flex-container">
+              <img
+                src={VirgilVaultImage}
+                alt="Grouped landing image"
+                style={{ width: "60%", height: "auto" }}
+              />
+              <section className="virgil-vault-text-container">
+                <h1 style={{ fontSize: "32px", marginBottom: "20px" }}>
+                  Don't read their story. <br></br>
+                  Hear them tell it.
+                </h1>
+                <p className="vault-description">
+                  The Virgil Vault is centered around your loved one’s voice —
+                  so you can remember them exactly as they were.
+                </p>
+              </section>
             </div>
           </div>
         </Element>
@@ -296,7 +368,7 @@ function Home() {
                         clasName="virgil-vault-price"
                         style={{ fontSize: "36px", marginTop: "30px" }}
                       >
-                        $1950
+                        $995
                       </h1>
                     </div>
                   </div>
@@ -338,9 +410,6 @@ function Home() {
                     <br></br>
                     <br></br>
                     <br></br>
-                    {/* <button type="submit" className="waitlist-button">
-                      Schedule a Consultation
-                    </button> */}
                   </div>
                 </div>
               </div>

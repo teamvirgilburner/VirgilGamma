@@ -245,6 +245,20 @@ button.cta-button {
   margin-right: 10px;
 }
 
+.explore-demo-button {
+  background: transparent;
+  color: #333; /* Dark text color for visibility */
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border: 3px solid transparent; /* Important for border-image */
+  border-radius: 50px; /* Adjust for more or less roundness */
+  border-image: linear-gradient(red, yellow) 1 / 1 / 0 stretch; /* Gradient border */
+}
+
 .images img {
   width: 100%;
   margin-top: 1rem;
@@ -422,4 +436,91 @@ button.cta-button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Virgil Voyage */
+
+.virgil-voyage-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  text-align: left;
+  background-color: #ffefb5;
+  border-radius: 30px;
+  padding: 30px;
+  margin-right: 20px;
+}
+
+.virgil-voyage-card-inner-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.virgil-voyage-card-header {
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.virgil-voyage-card-content {
+  margin-bottom: 30px;
+}
+
+.number-holder {
+  background-color: black;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+
+  width: 35px;
+  height: 35px;
+  border-radius: 20%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.voyage-card-image {
+  width: 90%;
+  height: auto;
+  margin: 10px auto;
+}
+
+.virgil-voyage-overall-holder {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.cta-button-voyage {
+  background-color: "#FFDE62";
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-right: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.voyage-description {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.virgil-vault-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 50%;
+  margin-right: 100px;
+}
+
+.vault-description {
+  font-size: 24px;
 }
