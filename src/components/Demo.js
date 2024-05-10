@@ -14,6 +14,7 @@ import c6 from "../images/carousel_images/c6.png";
 import c7 from "../images/carousel_images/c7.png";
 import DemoGallery from "./DemoGallery";
 import DemoFamilyTreeBigger from "../images/demo-family-tree-bigger.png";
+import BettyHeadshot from "../images/betty_round_headshot.png";
 
 import "react-multi-carousel/lib/styles.css";
 import "slick-carousel/slick/slick.css";
@@ -215,6 +216,41 @@ const Demo = () => {
           Return to main site
         </a>{" "}
         to start your own journey.
+      </div>
+      <div className ="demo-header"
+        style={{
+          display:'flex',
+          direction:'row',
+          justifyContent:'space-between',
+          width:'100%'
+        }}
+      >
+        <div style={{
+          fontFamily: 'Palatino Linotype, serif',
+          fontSize: '30pt', 
+          paddingTop: '40px', 
+          paddingLeft: '40px'
+          }}>
+          Virgil Vault
+        </div>
+        <div className = 'photo-and-name' 
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexGrow: 1
+          }}
+        >
+          <img style={{paddingTop: '35px', scale: '80%'}} src={BettyHeadshot} alt="Betty" />
+          <div style={{fontSize: '40pt', 
+          paddingTop: '20px', 
+          paddingLeft: '15px',
+          fontWeight: 'bold'}}>
+            Betty Rollin
+          </div>
+        </div>
+
       </div>
       <main className="main-content">
         <div className="white-box-holder">
