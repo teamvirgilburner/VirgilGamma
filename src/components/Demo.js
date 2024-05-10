@@ -267,10 +267,8 @@ const Demo = () => {
               alt="rightMacbook"
             />
           )}
-          {currentTab === "Places" && <div id="Places">Content for Places</div>}
-          {currentTab === "Favorites" && (
-            <div id="Places">Content for Places</div>
-          )}
+          {currentTab === "Places" && <Places/>}
+          {currentTab === "Favorites" && <Favorites/>}
           {currentTab === "Gallery" && <DemoGallery />}
         </div>
       </main>
