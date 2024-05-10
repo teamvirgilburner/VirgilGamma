@@ -222,13 +222,14 @@ const Demo = () => {
           display:'flex',
           direction:'row',
           justifyContent:'space-between',
-          width:'100%'
+          width:'100%',
+          height: '100px'
         }}
       >
         <div style={{
           fontFamily: 'Palatino Linotype, serif',
           fontSize: '30pt', 
-          paddingTop: '40px', 
+          paddingTop: '20px', 
           paddingLeft: '40px'
           }}>
           Virgil Vault
@@ -242,10 +243,10 @@ const Demo = () => {
             flexGrow: 1
           }}
         >
-          <img style={{paddingTop: '35px', scale: '80%'}} src={BettyHeadshot} alt="Betty" />
-          <div style={{fontSize: '40pt', 
-          paddingTop: '20px', 
-          paddingLeft: '15px',
+          <img style={{paddingTop: '60px', scale: '60%'}} src={BettyHeadshot} alt="Betty" />
+          <div style={{fontSize: '30pt', 
+          paddingTop: '30px', 
+          paddingLeft: '5px',
           fontWeight: 'bold'}}>
             Betty Rollin
           </div>
