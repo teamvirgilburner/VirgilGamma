@@ -92,7 +92,7 @@
 }
 
 .tabs-holder {
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .demo-page {
@@ -107,10 +107,11 @@
 .overall-image-holder {
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
-  overflow-x: auto; /* Enables horizontal scrolling */
-  white-space: nowrap; /* Prevents wrapping of items */
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  width: 100%; /* Ensure this container is the full width it's allowed, but no more */
+  max-width: 100vw; /* Prevents the container from extending beyond the view width */
 }
 
 .family-tree-photo {
