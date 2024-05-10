@@ -6,6 +6,7 @@ import Demo from "./components/Demo";
 import EarlyLife from "./components/EarlyLife";
 import CollegeYears from "./components/CollegeYears";
 import CareerCommunity from "./components/CareerCommunity";
+
 function App() {
   return (
     <Router>

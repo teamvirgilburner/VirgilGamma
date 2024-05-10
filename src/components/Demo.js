@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import LifeChapters from "./LifeChapters";
 import Places from "./Places";
 import Favorites from "./Favorites";
+import { MaterialSymbol } from "react-material-symbols";
+
 import c1 from "../images/carousel_images/c1.png";
 import c2 from "../images/carousel_images/c2.png";
 import c3 from "../images/carousel_images/c3.png";
@@ -222,30 +224,36 @@ const Demo = () => {
                 onClick={() => showContent("LifeChapters")}
                 className="tab-button"
               >
+                <span class="material-symbols-outlined">stack_star</span>
+                {/* Correct icon name */}
                 Life Chapters
               </button>
               <button
                 onClick={() => showContent("FamilyTree")}
                 className="tab-button"
               >
+                <span class="material-symbols-outlined">nature</span>
                 Family Tree
               </button>
               <button
                 onClick={() => showContent("Places")}
                 className="tab-button"
               >
+                <span class="material-symbols-outlined">map</span>
                 Places
               </button>
               <button
                 onClick={() => showContent("Favorites")}
                 className="tab-button"
               >
+                <span class="material-symbols-outlined">favorite</span>
                 Favorites
               </button>
               <button
                 onClick={() => showContent("Gallery")}
                 className="tab-button"
               >
+                <span class="material-symbols-outlined">gallery_thumbnail</span>
                 Gallery
               </button>
             </div>
@@ -264,7 +272,6 @@ const Demo = () => {
             <div id="Places">Content for Places</div>
           )}
           {currentTab === "Gallery" && <DemoGallery />}
-
         </div>
       </main>
     </div>
