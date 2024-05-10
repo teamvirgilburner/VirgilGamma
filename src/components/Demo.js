@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import LifeChapters from "./LifeChapters";
 import Places from "./Places";
 import Favorites from "./Favorites";
-import { MaterialSymbol } from "react-material-symbols";
+import ReactSearchBox from "react-search-box";
+import SearchBar from "./SearchBar"; // Adjust the path according to your project structure
 
 import c1 from "../images/carousel_images/c1.png";
 import c2 from "../images/carousel_images/c2.png";
@@ -184,6 +185,11 @@ const Demo = () => {
     }
   }
 
+  const handleSearch = (searchTerm) => {
+    console.log("Searching for:", searchTerm);
+    // Add your search logic here
+  };
+
   useEffect(() => {
     if (headingRef.current) {
       headingRef.current.scrollIntoView({ behavior: "smooth" });
@@ -217,41 +223,13 @@ const Demo = () => {
         </a>{" "}
         to start your own journey.
       </div>
-      <div className ="demo-header"
-        style={{
-          display:'flex',
-          direction:'row',
-          justifyContent:'space-between',
-          width:'100%',
-          height: '100px'
-        }}
-      >
-        <div style={{
-          fontFamily: 'Palatino Linotype, serif',
-          fontSize: '30pt', 
-          paddingTop: '20px', 
-          paddingLeft: '40px'
-          }}>
-          Virgil Vault
+      <div className="demo-header">
+        <div className="demo-header-logo">Virgil Vault</div>
+        <div className="photo-and-name">
+          <img style={{ scale: "60%" }} src={BettyHeadshot} alt="Betty" />
+          <div className="demo-name">Betty Rollin</div>
         </div>
-        <div className = 'photo-and-name' 
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexGrow: 1
-          }}
-        >
-          <img style={{paddingTop: '60px', scale: '60%'}} src={BettyHeadshot} alt="Betty" />
-          <div style={{fontSize: '30pt', 
-          paddingTop: '30px', 
-          paddingLeft: '5px',
-          fontWeight: 'bold'}}>
-            Betty Rollin
-          </div>
-        </div>
-
+        <SearchBar onSearch={handleSearch} />
       </div>
       <main className="main-content">
         <div className="white-box-holder">
@@ -304,8 +282,8 @@ const Demo = () => {
               alt="rightMacbook"
             />
           )}
-          {currentTab === "Places" && <Places/>}
-          {currentTab === "Favorites" && <Favorites/>}
+          {currentTab === "Places" && <Places />}
+          {currentTab === "Favorites" && <Favorites />}
           {currentTab === "Gallery" && <DemoGallery />}
         </div>
       </main>
