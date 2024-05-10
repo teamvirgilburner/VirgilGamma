@@ -108,16 +108,23 @@
 .vertical-image-holder {
   display: flex;
   flex-direction: column;
+  margin: 0px 10px;
 }
 
 .overall-image-holder {
   display: flex;
   flex-direction: row;
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  width: 100%; /* Ensure this container is the full width it's allowed, but no more */
-  max-width: 100vw; /* Prevents the container from extending beyond the view width */
+  align-items: space-between;
+  justify-content: center;
+  overflow-y: auto;
+  height: 90%;
+  padding: 40px;
+  /*width: 100%;  Ensure this container is the full width it's allowed, but no more */
+  /*max-width: 100vw; /* Prevents the container from extending beyond the view width */
+}
+
+.top-image {
+  margin-bottom: 10px;
 }
 
 .family-tree-photo {
