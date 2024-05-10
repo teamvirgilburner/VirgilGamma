@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import LifeChapters from "./LifeChapters";
+import Places from "./Places";
+import Favorites from "./Favorites";
 import c1 from "../images/carousel_images/c1.png";
 import c2 from "../images/carousel_images/c2.png";
 import c3 from "../images/carousel_images/c3.png";
@@ -262,6 +264,7 @@ const Demo = () => {
             <div id="Places">Content for Places</div>
           )}
           {currentTab === "Gallery" && <DemoGallery />}
+
         </div>
       </main>
     </div>
