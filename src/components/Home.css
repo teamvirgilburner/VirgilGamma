@@ -607,12 +607,12 @@ button.cta-button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
   margin: 30px 200px;
 }
 
 .whats-included-individual-box {
   display: flex;
+  font-family: "Open Sans", sans-serif;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -631,6 +631,7 @@ button.cta-button {
   align-items: center;
   margin: 40px;
   background: white;
+  font-family: "Open Sans", sans-serif;
 }
 
 .whats-included-icon {
