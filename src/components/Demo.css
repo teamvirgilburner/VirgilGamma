@@ -97,6 +97,8 @@
 .demo-header-logo {
   font-family: Palatino Linotype, serif;
   font-size: 40px;
+  background-color: transparent;
+  border: none;
 }
 
 .photo-and-name {

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Link, Element } from "react-scroll";
 import VirgilVoyage from "./VirgilVoyage";
 import Included from "./Included";
+import UnifiedButton from "./UnifiedButton";
 
 import { firestore } from "../firebase";
 import { addDoc, collection } from "firebase/firestore";
@@ -13,10 +14,6 @@ import downArrow from "../images/down-arrow.png";
 import newLandingImage from "../images/new-landing-image.png";
 import leftMacbook from "../images/left.png";
 import rightMacbook from "../images/right.png";
-import bigElipse from "../images/big-ellipse.png";
-import contributeMemories from "../images/contribute-memories.png";
-import completeInterviews from "../images/complete-interviews.png";
-import receiveVirgilVault from "../images/receive-virgil-vault.png";
 
 import "./Home.css"; // Assume you have corresponding CSS for styling
 import { toast, ToastContainer } from "react-toastify";
@@ -84,9 +81,6 @@ function Home() {
     } catch (event) {
       console.log(event);
     }
-    // toast.success("Thank you for your interest! We'll notify you when capacity becomes available.", {
-    //   position: "bottom-center"
-    // });
     toast.success(
       <div>
         Thank you for your interest!
@@ -105,44 +99,32 @@ function Home() {
       <header className="header">
         <nav className="navbar">
           <ul className="nav-list">
-            <button
-              onClick={goToHome}
-              style={{
-                fontFamily: "Palatino Linotype, serif",
-                fontWeight: "bold",
-                fontSize: "32px",
-                border: "transparent",
-                backgroundColor: "transparent",
-              }}
-            >
+            <button onClick={goToHome} className="header-logo">
               Virgil
             </button>
-            <Link to="how-it-works" className="nav-link">
-              How it Works
-            </Link>
-            <Link to="join-our-waitlist" className="nav-link">
-              What's Included
-            </Link>
-            <button
-              className="nav-link"
-              onClick={goToDemo}
+            <UnifiedButton to="#whats-included" label="What's included" />
+            <UnifiedButton to="#the-virgil-voyage" label="How It Works" />
+            <UnifiedButton
+              to="/demo"
+              label="Explore Demo"
+              external={true}
               style={{
                 backgroundColor: "transparent",
                 borderColor: "transparent",
               }}
-            >
-              Try it out
-            </button>
+            />
           </ul>
           <ul className="nav-waitlist">
-            <Link to="join-our-waitlist" className="nav-link-waitlist">
-              Join Waitlist
-            </Link>
+            <UnifiedButton
+              to="#join-our-waitlist"
+              label="Join Our Waitlist"
+              className="yellow-rectangular-button"
+            />
           </ul>
         </nav>
       </header>
       <main className="main-content">
-        <Element name="about-us" className="centered-flexbox">
+        <Element name="about-us" className="centered-flexbox" id="about-us">
           <div className="about-us-flex-container">
             <section className="about-us-text-container">
               <h1 style={{ fontSize: "48px", marginBottom: "20px" }}>
@@ -155,23 +137,20 @@ function Home() {
                 loved one's life story - in their own voice.
               </p>
               <div className="about-us-buttons-container">
-                <Link
-                  to="join-our-waitlist"
-                  className="cta-button"
-                  style={{ backgroundColor: "#FFDE62" }}
-                >
-                  Join Our Waitlist
-                </Link>
-                <Link
-                  to="explore-demo"
-                  className="cta-button"
+                <UnifiedButton
+                  to="#join-our-waitlist"
+                  label="Join Our Waitlist"
+                  className="yellow-round-button"
+                />
+                <UnifiedButton
+                  to="/demo"
+                  label="Explore Demo"
+                  className="transparent-round-button"
+                  external={true}
                   style={{
                     backgroundColor: "transparent",
-                    border: "2px solid #FFA500",
                   }}
-                >
-                  Explore demo
-                </Link>
+                />
               </div>
               <div className="about-us-scroll">
                 <Link to="how-it-works" className="about-us-scroll-link">
@@ -191,7 +170,7 @@ function Home() {
         <Element
           name="the-virgil-voyage"
           className="centered-flexbox"
-          id="waitlist"
+          id="the-virgil-voyage"
         >
           <div className="content-holder">
             <div className="title-holder">
@@ -210,7 +189,7 @@ function Home() {
         <Element
           name="the-virgil-vault"
           className="centered-flexbox"
-          id="waitlist"
+          id="the-virgil-vault"
         >
           <div className="content-holder">
             <div className="title-holder">
@@ -245,9 +224,22 @@ function Home() {
                 </p>
               </section>
             </div>
+            <UnifiedButton
+              to="/demo"
+              label="Explore Demo"
+              className="yellow-round-button"
+              external={true}
+              style={{
+                backgroundColor: "transparent",
+              }}
+            />
           </div>
         </Element>
-        <Element name="how-it-works" className="centered-flexbox">
+        <Element
+          name="whats-included"
+          className="centered-flexbox"
+          id="whats-included"
+        >
           <div className="content-holder">
             <div className="title-holder">
               <div className="title-background-grdient">
@@ -262,7 +254,7 @@ function Home() {
         <Element
           name="join-our-waitlist"
           className="centered-flexbox"
-          id="waitlist"
+          id="join-our-waitlist"
         >
           <div className="content-holder">
             <div className="title-holder">
@@ -430,7 +422,11 @@ function Home() {
             </div>
           </div>
         </Element>
-        <Element name="explore-demo" className="centered-flexbox">
+        <Element
+          name="explore-demo"
+          className="centered-flexbox"
+          id="explore-demo"
+        >
           <div
             style={{
               backgroundColor: "#FFDE62",

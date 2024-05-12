@@ -19,12 +19,11 @@ function SearchBar({ onSearch }) {
       <span class="material-symbols-outlined">search</span>
       <input
         type="text"
-        placeholder="Search Betty's Memoir"
+        placeholder="Search Feature Coming Soon!"
         value={searchTerm}
         onChange={handleChange}
         className="search-input"
       />
-      {/* Button removed; form submission handled by pressing Enter */}
     </form>
   );
 }

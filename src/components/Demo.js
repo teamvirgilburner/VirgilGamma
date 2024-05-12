@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import LifeChapters from "./LifeChapters";
 import Places from "./Places";
 import Favorites from "./Favorites";
-import ReactSearchBox from "react-search-box";
 import SearchBar from "./SearchBar"; // Adjust the path according to your project structure
 
 import c1 from "../images/carousel_images/c1.png";
@@ -187,7 +186,10 @@ const Demo = () => {
 
   const handleSearch = (searchTerm) => {
     console.log("Searching for:", searchTerm);
-    // Add your search logic here
+  };
+
+  const goToHome = () => {
+    navigate("/home");
   };
 
   useEffect(() => {
@@ -224,7 +226,9 @@ const Demo = () => {
         to start your own journey.
       </div>
       <div className="demo-header">
-        <div className="demo-header-logo">Virgil Vault</div>
+        <button onClick={goToHome} className="demo-header-logo">
+          Virgil Vault
+        </button>
         <div className="photo-and-name">
           <img style={{ scale: "60%" }} src={BettyHeadshot} alt="Betty" />
           <div className="demo-name">Betty Rollin</div>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400&display=swap");
+
 /* HomePage.css */
 .homepage {
   font-family: Arial, sans-serif;
@@ -5,6 +7,15 @@
 
 body {
   overflow-x: hidden; /* This prevents horizontal scrolling */
+}
+
+.unified-button {
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 50px;
+  font-family: "Open Sans", sans-serif;
+  background-color: transparent;
+  border: 2px solid transparent; /* Makes the border transparent */
 }
 
 .title-background-grdient {
@@ -255,6 +266,39 @@ html {
 
 .hero p {
   margin-bottom: 1.5rem;
+}
+
+.yellow-round-button {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+  border-radius: 50px;
+  background: #ffde62;
+  border: none;
+  font-size: 16px;
+}
+
+.yellow-rectangular-button {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+  border-radius: 5px;
+  background: #ffde62;
+  border: none;
+  font-size: 16px;
+}
+
+.transparent-round-button {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 10px;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid #fc8703;
+  font-size: 16px;
 }
 
 .cta-button {
@@ -564,7 +608,7 @@ button.cta-button {
   flex-direction: row;
   justify-content: space-between;
 
-  margin: 30px 30px;
+  margin: 30px 200px;
 }
 
 .whats-included-individual-box {
@@ -573,19 +617,9 @@ button.cta-button {
   justify-content: center;
   text-align: center;
   align-items: center;
-  border: 2px solid #ffa500;
-  background: linear-gradient(#131219, #131219) padding-box,
-    linear-gradient(var(--angle), #070707, #687aff) border-box;
-  /* background: linear-gradient(
-    135deg,
-    #ffa500,
-    #ff5733,
-    #c70039
-  ); /* Gradient color */
-
+  border: 4px solid #ffa500;
   width: 25%;
   border-radius: 15px;
-
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
 }
 
@@ -602,4 +636,11 @@ button.cta-button {
 .whats-included-icon {
   font-size: 60px;
   margin-bottom: 10px;
+}
+
+.header-logo {
+  font-family: Palatino Linotype, serif;
+  font-size: 40px;
+  background-color: transparent;
+  border: none;
 }
