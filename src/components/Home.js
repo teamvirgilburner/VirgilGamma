@@ -76,11 +76,11 @@ function Home() {
           return words[nextIndex];
         });
         setFade(false); // Reset fade for next cycle
-      }, 2000); // Half the interval to fade out, then change the word
-    }, 4000);
+      }, 1000); // Half the interval to fade out, then change the word
+    }, 2500);
 
     return () => clearInterval(intervalId);
-  }, []);
+  },);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -184,7 +184,7 @@ function Home() {
 
             <img
               src={newLandingImage}
-              alt="Grouped landing image"
+              alt="Grouped landing"
               style={{ width: "40%", height: "auto" }}
             />
           </div>
@@ -232,7 +232,7 @@ function Home() {
             <div className="about-us-flex-container">
               <img
                 src={VirgilVaultImage}
-                alt="Grouped landing image"
+                alt="Grouped landing"
                 style={{ width: "60%", height: "auto" }}
               />
               <section className="virgil-vault-text-container">

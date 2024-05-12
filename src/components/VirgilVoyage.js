@@ -4,7 +4,7 @@ import vv2 from "../images/virgil-voyage/vv2.png";
 import vv3 from "../images/virgil-voyage/vv3.png";
 import vv4 from "../images/virgil-voyage/vv4.png";
 import vv5 from "../images/virgil-voyage/vv5.png";
-import { Link, Element } from "react-scroll";
+// import { Link, Element } from "react-scroll";
 
 import "react-multi-carousel/lib/styles.css";
 import "slick-carousel/slick/slick.css";
