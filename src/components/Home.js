@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link, Element } from "react-scroll";
 import VirgilVoyage from "./VirgilVoyage";
@@ -56,11 +56,31 @@ function Home() {
     setMotivation(event.target.value);
   };
 
+  const [currentWord, setCurrentWord] = useState("parents");
+  const words = ["grandparents", "friends", "mentors", "heroes"];
+  const [fade, setFade] = useState(true);
+
   // Function to handle the change in dropdown
   const handleChangeDiscovery = (event) => {
     setSelectedValue(event.target.value); // Update the state with new value
     console.log(event.target.value);
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setFade(true); // Trigger fade out
+      setTimeout(() => {
+        setCurrentWord((prevWord) => {
+          const currentIndex = words.indexOf(prevWord);
+          const nextIndex = (currentIndex + 1) % words.length;
+          return words[nextIndex];
+        });
+        setFade(false); // Reset fade for next cycle
+      }, 1000); // Half the interval to fade out, then change the word
+    }, 2000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -128,7 +148,11 @@ function Home() {
           <div className="about-us-flex-container">
             <section className="about-us-text-container">
               <h1 style={{ fontSize: "48px", marginBottom: "20px" }}>
-                Your parents can't live forever.
+                Your{" "}
+                <span className={fade ? "fade" : "gradient-text"}>
+                  {currentWord}
+                </span>{" "}
+                can't live forever.
                 <br />
                 But their <span className="gradient-text">story</span> can.
               </h1>
