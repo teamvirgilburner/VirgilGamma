@@ -515,7 +515,7 @@ button.cta-button {
 .virgil-voyage-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   width: 25%;
   text-align: left;
   background-color: #ffefb5;
@@ -527,7 +527,7 @@ button.cta-button {
 .virgil-voyage-card-inner-holder {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
 }
 
 .virgil-voyage-card-header {
