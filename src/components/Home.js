@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link, Element } from "react-scroll";
 import VirgilVoyage from "./VirgilVoyage";
+import Included from "./Included";
 
 import { firestore } from "../firebase";
 import { addDoc, collection } from "firebase/firestore";
@@ -192,23 +193,15 @@ function Home() {
           className="centered-flexbox"
           id="waitlist"
         >
-          <div style={{ width: "80%" }}>
-            <h1
-              style={{
-                fontSize: "48px",
-                backgroundImage: `url(${bigElipse})`,
-                backgroundSize: "contain", // Cover ensures the background covers the whole area
-                backgroundPosition: "center", // Center the image within the element
-                backgroundRepeat: "no-repeat", // The image will not tile
-                width: "100%",
-                height: "auto",
-              }}
-            >
-              The Virgil Voyage
-            </h1>
-            <p className="voyage-description">
-              How we capture your loved one's story
-            </p>
+          <div className="content-holder">
+            <div className="title-holder">
+              <div className="title-background-grdient">
+                <h1 className="section-title">The Virgil Voyage</h1>
+                <p className="voyage-description">
+                  How we capture your loved one's story
+                </p>
+              </div>
+            </div>
             <div className="virgil-voyage-holder">
               <VirgilVoyage />
             </div>
@@ -219,23 +212,22 @@ function Home() {
           className="centered-flexbox"
           id="waitlist"
         >
-          <div style={{ width: "80%" }}>
-            <h1
-              style={{
-                fontSize: "48px",
-                backgroundImage: `url(${bigElipse})`,
-                backgroundSize: "contain", // Cover ensures the background covers the whole area
-                backgroundPosition: "center", // Center the image within the element
-                backgroundRepeat: "no-repeat", // The image will not tile
-                width: "100%",
-                height: "auto",
-              }}
-            >
-              The Virgil Vault
-            </h1>
-            <p className="voyage-description">
-              How we preserve their story for generations to come
-            </p>
+          <div className="content-holder">
+            <div className="title-holder">
+              <div className="title-background-grdient">
+                <h1
+                  style={{
+                    fontSize: "48px",
+                  }}
+                >
+                  The Virgil Vault{" "}
+                </h1>
+                <p className="voyage-description">
+                  How we preserve their story for generations to come{" "}
+                </p>
+              </div>
+            </div>
+
             <div className="about-us-flex-container">
               <img
                 src={VirgilVaultImage}
@@ -248,86 +240,23 @@ function Home() {
                   Hear them tell it.
                 </h1>
                 <p className="vault-description">
-                  The Virgil Vault is centered around your loved one’s voice —
-                  so you can remember them exactly as they were.
+                  Your loved one’s voice is the center of the Virgil Vault — so
+                  you can preserve their authentic personality forever.
                 </p>
               </section>
             </div>
           </div>
         </Element>
         <Element name="how-it-works" className="centered-flexbox">
-          <div className="Features-section">
-            <h1
-              //className="colored-ellipse"
-              style={{
-                fontSize: "48px",
-                backgroundImage: `url(${bigElipse})`,
-                backgroundSize: "contain", // Cover ensures the background covers the whole area
-                backgroundPosition: "center", // Center the image within the element
-                backgroundRepeat: "no-repeat", // The image will not tile
-                width: "200%",
-                height: "auto",
-                marginBottom: "2%",
-              }}
-            >
-              How Virgil captures <br></br>your family story
-            </h1>
-            <section className="features-container">
-              <section className="feature-textbox">
-                <img
-                  src={completeInterviews}
-                  alt="completeInterviews"
-                  className="resized-image"
-                />
-                <div className="feature-explanation">
-                  {" "}
-                  <h1 className="number-circle"> 01</h1>
-                  <h1 className="feature-title">
-                    {" "}
-                    Complete the Virgil interviews
-                  </h1>
-                  <p>
-                    Virgil pairs your loved one with a professional historian,
-                    who will walk them through a series of eight conversational
-                    interviews via video chat.
-                  </p>
-                </div>
-              </section>
-              <section className="feature-textbox">
-                <div className="feature-explanation">
-                  {" "}
-                  <h1 className="number-circle"> 02</h1>
-                  <h1 className="feature-title"> Contribute your memories </h1>
-                  <p>
-                    Family members upload photos, documents, and their own
-                    memories tor be woven into the tapestry of your loved one's
-                    life story.
-                  </p>
-                </div>
-                <img
-                  src={contributeMemories}
-                  alt="contributeMemories"
-                  className="resized-image"
-                />
-              </section>
-              <section className="feature-textbox">
-                <img
-                  src={receiveVirgilVault}
-                  alt="receiveVirgilVault"
-                  className="resized-image"
-                />
-                <div className="feature-explanation">
-                  {" "}
-                  <h1 className="number-circle"> 03</h1>
-                  <h1 className="feature-title"> Receive Your Virgil Vault </h1>
-                  <p>
-                    Virgil organizes your loved one’s story into a beautiful,
-                    interactive video memoir preserving their unique voice and
-                    experiences.
-                  </p>
-                </div>
-              </section>
-            </section>
+          <div className="content-holder">
+            <div className="title-holder">
+              <div className="title-background-grdient">
+                <h1 className="section-title">What's Included</h1>
+              </div>
+            </div>
+            <div className="virgil-voyage-holder">
+              <Included />
+            </div>
           </div>
         </Element>
         <Element
@@ -335,20 +264,12 @@ function Home() {
           className="centered-flexbox"
           id="waitlist"
         >
-          <div style={{ width: "80%" }}>
-            <h1
-              style={{
-                fontSize: "48px",
-                backgroundImage: `url(${bigElipse})`,
-                backgroundSize: "contain", // Cover ensures the background covers the whole area
-                backgroundPosition: "center", // Center the image within the element
-                backgroundRepeat: "no-repeat", // The image will not tile
-                width: "100%",
-                height: "auto",
-              }}
-            >
-              What's Included
-            </h1>
+          <div className="content-holder">
+            <div className="title-holder">
+              <div className="title-background-grdient">
+                <h1 className="section-title">Join Our Waitlist</h1>
+              </div>
+            </div>
             <div className="waitlist-holder">
               <div
                 className="virgil-vault"

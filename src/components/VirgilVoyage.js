@@ -101,9 +101,6 @@ const VirgilVoyage = () => {
             alt="Guy talking on the computer"
             className="voyage-card-img"
           />
-          <Link to="explore-demo" className="cta-button-voyage">
-            Explore demo
-          </Link>
         </div>
       </div>
       <div className="virgil-voyage-card">
