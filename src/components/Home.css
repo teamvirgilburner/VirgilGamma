@@ -623,6 +623,25 @@ button.cta-button {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
 }
 
+.dynamic-text {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  background: linear-gradient(45deg, orange, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* for Safari */
+  font-size: "48px";
+}
+
+.fade-out {
+  opacity: 0;
+}
+
 .fade {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;

@@ -76,8 +76,8 @@ function Home() {
           return words[nextIndex];
         });
         setFade(false); // Reset fade for next cycle
-      }, 1000); // Half the interval to fade out, then change the word
-    }, 2000);
+      }, 2000); // Half the interval to fade out, then change the word
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -149,9 +149,7 @@ function Home() {
             <section className="about-us-text-container">
               <h1 style={{ fontSize: "48px", marginBottom: "20px" }}>
                 Your{" "}
-                <span className={fade ? "fade" : "gradient-text"}>
-                  {currentWord}
-                </span>{" "}
+                <span className={fade ? "fade" : "fade-in"}>{currentWord}</span>{" "}
                 can't live forever.
                 <br />
                 But their <span className="gradient-text">story</span> can.
