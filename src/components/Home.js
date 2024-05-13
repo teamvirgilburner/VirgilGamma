@@ -56,8 +56,8 @@ function Home() {
     setMotivation(event.target.value);
   };
 
-  const [currentWord, setCurrentWord] = useState("parents");
-  const words = ["grandparents", "friends", "mentors", "heroes"];
+  const [currentWord, setCurrentWord] = useState("story");
+  const words = ["voice", "legacy", "jokes", "wisdom", "laugh"];
   const [fade, setFade] = useState(true);
 
   // Function to handle the change in dropdown
@@ -148,11 +148,13 @@ function Home() {
           <div className="about-us-flex-container">
             <section className="about-us-text-container">
               <h1 style={{ fontSize: "48px", marginBottom: "20px" }}>
-                Your{" "}
-                <span className={fade ? "fade" : "fade-in"}>{currentWord}</span>{" "}
-                can't live forever.
+                Your parents can't live forever.
                 <br />
-                But their <span className="gradient-text">story</span> can.
+                But their{" "}
+                <span className={fade ? "fade" : "fade-in"}>
+                  {currentWord}
+                </span>{" "}
+                can.
               </h1>
               <p className="feature-description">
                 The Virgil Vault is a digital biography that preserves your
