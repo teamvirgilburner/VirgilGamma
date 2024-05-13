@@ -344,8 +344,6 @@ function Home() {
                     </ul>
                     <br></br>
                     <br></br>
-                    <br></br>
-                    <br></br>
                   </div>
                   <div>
                     <CalendlyButton/>

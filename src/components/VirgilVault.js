@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+// import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
-import { Carousel } from "react-responsive-carousel";
+// import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import VVI1 from "../images/virgil-vault/VVI1.png";
@@ -138,7 +138,7 @@ const VirgilVault = () => {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(1);
+  // const [activeIndex, setActiveIndex] = useState(1);
 
   const [deviceType, setDeviceType] = useState("desktop");
 
