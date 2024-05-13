@@ -68,16 +68,16 @@ function Home() {
     console.log(event.target.value);
   };
 
-  function isElementCentered(elem) {
-    const rect = elem.getBoundingClientRect();
-    const elemCenter = (rect.top + rect.bottom) / 2;
-    const viewportCenter = window.innerHeight / 2;
-    const isCentered = Math.abs(elemCenter - viewportCenter) <= 50; // Consider centered if within 50px of viewport center
-    console.log(
-      `Element center: ${elemCenter}, Viewport center: ${viewportCenter}, Is centered: ${isCentered}`
-    );
-    return isCentered;
-  }
+  // function isElementCentered(elem) {
+  //   const rect = elem.getBoundingClientRect();
+  //   const elemCenter = (rect.top + rect.bottom) / 2;
+  //   const viewportCenter = window.innerHeight / 2;
+  //   const isCentered = Math.abs(elemCenter - viewportCenter) <= 50; // Consider centered if within 50px of viewport center
+  //   console.log(
+  //     `Element center: ${elemCenter}, Viewport center: ${viewportCenter}, Is centered: ${isCentered}`
+  //   );
+  //   return isCentered;
+  // }
 
   useEffect(() => {
     const intervalId = setInterval(() => {
