@@ -1,16 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 .carousel-card {
-  position: relative; /* This allows absolute positioning relative to the card */
-  /* Other styles... */
-}
-
-.carousel-card {
   position: relative; /* Enables absolute positioning for child elements */
   display: inline-block; /* Keeps the card size as per the content */
   /* Add more styles as needed */
   border: 1px solid rgb(222, 218, 218); /* This will add the border around the card */
   border-radius: 30px; /* This will create rounded corners */
+  max-width: 90%;
+  max-height: 70%;
 }
 
 .carousel-card-header {
@@ -32,13 +29,13 @@
 }
 
 .carousel-card-image img {
-  width: auto; /* Make the image responsive */
+  width: 90%; /* Make the image responsive */
   height: auto; /* Maintain aspect ratio */
   max-width: 100%;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 20px;
 }
 .carousel-card-body {
   font-family: "Poppins", sans-serif;
@@ -59,6 +56,10 @@ h3 {
   align-items: left;
   text-align: left;
   margin-left: 10px;
+}
+
+.bulleted {
+  font-size: 14px;
 }
 
 .bulleted::before {
