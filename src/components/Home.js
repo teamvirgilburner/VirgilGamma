@@ -57,8 +57,8 @@ function Home() {
   };
 
   const [currentWord, setCurrentWord] = useState("story");
-  const words = ["voice", "legacy", "jokes", "wisdom", "laugh"];
-  const [fade, setFade] = useState(true);
+  const words = ["story", "voice", "legacy", "jokes", "wisdom", "laugh"];
+  const [fade, setFade] = useState(false);
 
   // Function to handle the change in dropdown
   const handleChangeDiscovery = (event) => {
