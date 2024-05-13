@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
+// { useState, useEffect, useRef } from "react";
 import leftTop from "../images/demo-gallery/left-top.png";
 import leftBottom from "../images/demo-gallery/left-bottom.png";
 import middleTop from "../images/demo-gallery/middle-top.png";

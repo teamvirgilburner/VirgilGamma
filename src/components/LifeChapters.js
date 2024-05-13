@@ -10,7 +10,7 @@ import c5 from "../images/carousel_images/c5.png";
 import c6 from "../images/carousel_images/c6.png";
 import c7 from "../images/carousel_images/c7.png";
 // import MargaretThompsonLarge from "../images/m-thompson-large.png"
-import bettyHeadshot from "../images/betty_headshot.png";
+// import bettyHeadshot from "../images/betty_headshot.png";
 
 import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
@@ -182,6 +182,8 @@ const LifeChapters = () => {
       setCurrentTab(tabName);
     }
   }
+
+  showContent();
 
   useEffect(() => {
     if (headingRef.current) {
