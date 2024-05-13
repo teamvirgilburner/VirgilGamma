@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import CarouselCard from "./CarouselCard";
-// import MargaretThompson from "../images/margaret-thompson.png";
-import c1 from "../images/carousel_images/c1.png";
-import c2 from "../images/carousel_images/c2.png";
-import c3 from "../images/carousel_images/c3.png";
-import c4 from "../images/carousel_images/c4.png";
-import c5 from "../images/carousel_images/c5.png";
-import c6 from "../images/carousel_images/c6.png";
-import c7 from "../images/carousel_images/c7.png";
+import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import VVI1 from "../images/virgil-vault/VVI1.png";
+import VVI2 from "../images/virgil-vault/VVI2.png";
+import VVI3 from "../images/virgil-vault/VVI3.png";
+import VVI4 from "../images/virgil-vault/VVI4.png";
+import VVI5 from "../images/virgil-vault/VVI5.png";
 // import MargaretThompsonLarge from "../images/m-thompson-large.png"
 // import bettyHeadshot from "../images/betty_headshot.png";
 
@@ -16,9 +17,9 @@ import "react-multi-carousel/lib/styles.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Demo.css";
+import "./Home.css";
 
-const LifeChapters = () => {
+const VirgilVault = () => {
   const headingRef = useRef(null);
 
   const navigate = useNavigate();
@@ -48,29 +49,36 @@ const LifeChapters = () => {
   };
 
   const settings = {
+    swipeToSlide: true,
     initialSlide: 1,
     centerMode: true,
     infinite: false,
-    centerPadding: "25px",
-    slidesToShow: 3,
-    speed: 500,
+    dots: true,
     arrows: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow2 />,
-    beforeChange: (current, next) => setActiveIndex(next), // Update active index on slide change
+    centerPadding: "0px",
+    slidesToShow: 1,
+    speed: 500,
   };
 
   const items = [
     {
       id: 0,
-      imageUrl: "",
+      imageUrl: VVI1,
+      heading: "Don't read their story. Hear them tell it.",
+      content:
+        "Your loved one's voice is the center of the Virgil Vault - so you can preserve their authentic personality forever. ",
       years: "",
       title: "",
       features: [],
     },
     {
       id: 1,
-      imageUrl: c1,
+      imageUrl: VVI2,
+      heading: "Easy jump to specific chapters of their life.",
+      content:
+        "The Virgil Vault organizes your loved one's story into distinct chapters, each capture a unique phase of their life. ",
       years: "1938-1948",
       title: "Early Life in Ithaca",
       features: [
@@ -83,7 +91,10 @@ const LifeChapters = () => {
     },
     {
       id: 2,
-      imageUrl: c2,
+      imageUrl: VVI3,
+      heading: "All of your family photos. All in one place. ",
+      content:
+        "Every family member can contribute their photos, home videos, and documents - the Virgil Vault will magically place them in the approrpriate life chapter. ",
       years: "1949-1954",
       title: "Education & | Teenage Years",
       features: [
@@ -96,7 +107,10 @@ const LifeChapters = () => {
     },
     {
       id: 3,
-      imageUrl: c3,
+      imageUrl: VVI4,
+      heading: "Search for specific memories, moments, and themes.",
+      content:
+        "Quickly locate that secret family recipe, the address of their childhood home, or their favorite holiday memories from across the years.",
       years: "1955-1960",
       title: "Early Career & Acting",
       features: [
@@ -109,7 +123,10 @@ const LifeChapters = () => {
     },
     {
       id: 4,
-      imageUrl: c4,
+      imageUrl: VVI5,
+      heading: "Get memory highlights delivered directly to you. ",
+      content:
+        "Uncover hiddne stories and celebrate major milestones through daily, weekly, or monthly memory highlights delivered straight to your smartphone. ",
       years: "1961-1970",
       title: "Professional | Writing Career",
       features: [
@@ -118,56 +135,6 @@ const LifeChapters = () => {
         "Recognition and Setbacks",
       ],
       buttonText: "Coming Soon!",
-    },
-    {
-      id: 5,
-      imageUrl: c5,
-      years: "1971-1980",
-      title: "TV Journalism & | Greatest Challenges",
-      features: [
-        "Shift to Television",
-        "Battle with Breast Cancer",
-        "Authorship",
-      ],
-      buttonText: "Coming Soon!",
-    },
-    {
-      id: 6,
-      imageUrl: c6,
-      years: "1981-2000",
-      title: "Later Career & Advocacy",
-      features: [
-        "Continued Writing and TV Career",
-        "Family and Personal Life",
-        "New Advocacy Efforts",
-      ],
-      buttonText: "Coming Soon!",
-    },
-    {
-      id: 7,
-      imageUrl: c7,
-      years: "2001-Present",
-      title: "Reflection & Legacy",
-      features: [
-        "Reflecting on Life Lessons",
-        "Loss and Coping",
-        "Ongoing Advocacy",
-      ],
-      buttonText: "Coming Soon!",
-    },
-    {
-      id: 8,
-      imageUrl: "",
-      years: "",
-      title: "",
-      features: [],
-    },
-    {
-      id: 9,
-      imageUrl: "",
-      years: "",
-      title: "",
-      features: [],
     },
   ];
 
@@ -210,40 +177,28 @@ const LifeChapters = () => {
   }, [deviceType]);
 
   return (
-    <div className="life-chapters-container">
-      <div className="carousel-container">
-        <div
-          style={{
-            width: "100%",
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        >
-          <Slider {...settings}>
-            {items.map((item, index) => {
-              const isCenter = index === activeIndex; // Determine if this slide is the center slide
-              return (
-                <div
-                  className={`item ${isCenter ? "center" : ""}`}
-                  key={item.id}
-                >
-                  <CarouselCard
-                    years={item.years}
-                    imageUrl={item.imageUrl}
-                    title={item.title}
-                    items={item.features}
-                    isCenter={isCenter}
-                    buttonText={item.buttonText}
-                    goto={item.goto}
-                  />
-                </div>
-              );
-            })}
-          </Slider>
-        </div>
-      </div>
+    <div className="carousel-container">
+      <Slider {...settings}>
+        {items.map((item, index) => {
+          return (
+            <div className="virgil-vault-carousel-container" key={item.id}>
+              <img
+                src={item.imageUrl}
+                alt="Grouped landing"
+                style={{ width: "50%", height: "auto", marginRight: "10px" }}
+              />
+              <section className="virgil-vault-text-container">
+                <h1 style={{ fontSize: "32px", marginBottom: "20px" }}>
+                  {item.heading}
+                </h1>
+                <p className="vault-description">{item.content}</p>
+              </section>
+            </div>
+          );
+        })}
+      </Slider>
     </div>
   );
 };
 
-export default LifeChapters;
+export default VirgilVault;
