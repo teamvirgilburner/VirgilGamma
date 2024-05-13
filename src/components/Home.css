@@ -330,6 +330,7 @@ button.cta-button {
   border: 3px solid transparent; /* Important for border-image */
   border-radius: 50px; /* Adjust for more or less roundness */
   border-image: linear-gradient(red, yellow) 1 / 1 / 0 stretch; /* Gradient border */
+  transition: background-color 0.3s ease;
 }
 
 .images img {
@@ -469,7 +470,8 @@ button.cta-button {
 }
 
 .waitlist-button:hover,
-.nav-link-waitlist:hover {
+.nav-link-waitlist:hover,
+.explore-demo-button:hover {
   background-color: #cc8400; /* Darker shade for hover effect */
 }
 
