@@ -80,7 +80,7 @@ function Home() {
     }, 2500);
 
     return () => clearInterval(intervalId);
-  },);
+  });
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -314,16 +314,16 @@ function Home() {
 
                     <ul>
                       <li>
-                        Virgil Vault — an interactive archive that merges their
-                        voice with photos, videos, and more
-                      </li>
-                      <br></br>
-                      <li>
-                        10 hours of conversational interviews — enough to
+                        Up to 8 hours of conversational interviews - enough to
                         capture their entire life story!
                       </li>
                       <br></br>
                       <li>High-fidelity audio and video recordings</li>
+                      <br></br>
+                      <li>
+                        An interactive memoir that merges their voice with
+                        phots, videos, and more
+                      </li>
                       <br></br>
 
                       <li>
@@ -341,7 +341,9 @@ function Home() {
                       <li>Safe, secure, and private to you and your family</li>
                       <br></br>
 
-                      <li>Shareable and downloadable</li>
+                      <li>
+                        1 year of access to the Virgil Vault - then $79/yr
+                      </li>
                     </ul>
                     <br></br>
                     <br></br>
