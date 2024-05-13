@@ -23,6 +23,14 @@ const LifeChapters = () => {
 
   const navigate = useNavigate();
 
+  const goToEarlyLife = () => {
+    navigate("/early-life");
+  };
+
+  const styling = {
+    color: "black",
+  };
+
   function SampleNextArrow(props) {
     const { className, onClick } = props;
     return (
@@ -37,14 +45,6 @@ const LifeChapters = () => {
         hello
       </div>
     );
-  };
-
-  const goToEarlyLife = () => {
-    navigate("/early-life");
-  };
-
-  const styling = {
-    color: "black",
   };
 
   const settings = {

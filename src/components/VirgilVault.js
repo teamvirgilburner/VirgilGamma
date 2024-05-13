@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -31,17 +32,34 @@ const VirgilVault = () => {
     color: "black",
   };
 
+  function SampleNextArrow(props) {
+    const { className, onClick } = props;
+    return (
+      <div className={className} style={{ ...styling }} onClick={onClick} />
+    );
+  }
+
+  const SamplePrevArrow2 = (props) => {
+    const { className, onClick } = props;
+    return (
+      <div className={className} onClick={onClick} style={{ ...styling }}>
+        hello
+      </div>
+    );
+  };
+
   const settings = {
     swipeToSlide: true,
-
     initialSlide: 1,
     centerMode: true,
     infinite: false,
     dots: true,
+    arrows: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow2 />,
     centerPadding: "0px",
     slidesToShow: 1,
     speed: 500,
-    arrows: false,
   };
 
   const items = [
@@ -160,12 +178,7 @@ const VirgilVault = () => {
 
   return (
     <div className="carousel-container">
-      <Carousel
-        showThumbs={false}
-        draggable={true}
-        swipeable={true}
-        showStatus={false}
-      >
+      <Slider {...settings}>
         {items.map((item, index) => {
           return (
             <div className="virgil-vault-carousel-container" key={item.id}>
@@ -183,7 +196,7 @@ const VirgilVault = () => {
             </div>
           );
         })}
-      </Carousel>
+      </Slider>
     </div>
   );
 };
