@@ -15,6 +15,8 @@ import newLandingImage from "../images/new-landing-image.png";
 import leftMacbook from "../images/left.png";
 import rightMacbook from "../images/right.png";
 
+import CalendlyButton from "./plugins/CalendlyModule";
+
 import "./Home.css"; // Assume you have corresponding CSS for styling
 import { toast, ToastContainer } from "react-toastify";
 
@@ -349,6 +351,9 @@ function Home() {
                     <br></br>
                     <br></br>
                     <br></br>
+                  </div>
+                  <div>
+                    <CalendlyButton/>
                   </div>
                 </div>
               </div>
