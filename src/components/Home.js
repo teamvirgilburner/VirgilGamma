@@ -4,10 +4,10 @@ import { Link, Element } from "react-scroll";
 import VirgilVoyage from "./VirgilVoyage";
 import Included from "./Included";
 import UnifiedButton from "./UnifiedButton";
+import VirgilVault from "./VirgilVault";
 
 import { firestore } from "../firebase";
 import { addDoc, collection } from "firebase/firestore";
-import VirgilVaultImage from "../images/the-virgil-vault.png";
 
 import whatsIncludedBigBg from "../images/whats-included-big-bg.png";
 import downArrow from "../images/down-arrow.png";
@@ -67,6 +67,17 @@ function Home() {
     setSelectedValue(event.target.value); // Update the state with new value
     console.log(event.target.value);
   };
+
+  function isElementCentered(elem) {
+    const rect = elem.getBoundingClientRect();
+    const elemCenter = (rect.top + rect.bottom) / 2;
+    const viewportCenter = window.innerHeight / 2;
+    const isCentered = Math.abs(elemCenter - viewportCenter) <= 50; // Consider centered if within 50px of viewport center
+    console.log(
+      `Element center: ${elemCenter}, Viewport center: ${viewportCenter}, Is centered: ${isCentered}`
+    );
+    return isCentered;
+  }
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -207,7 +218,7 @@ function Home() {
                 </p>
               </div>
             </div>
-            <div className="virgil-voyage-holder">
+            <div className="virgil-voyage-holder" id="myCarousel">
               <VirgilVoyage />
             </div>
           </div>
@@ -233,30 +244,14 @@ function Home() {
               </div>
             </div>
 
-            <div className="about-us-flex-container">
-              <img
-                src={VirgilVaultImage}
-                alt="Grouped landing"
-                style={{ width: "60%", height: "auto" }}
-              />
-              <section className="virgil-vault-text-container">
-                <h1 style={{ fontSize: "32px", marginBottom: "20px" }}>
-                  Don't read their story. <br></br>
-                  Hear them tell it.
-                </h1>
-                <p className="vault-description">
-                  Your loved one’s voice is the center of the Virgil Vault — so
-                  you can preserve their authentic personality forever.
-                </p>
-              </section>
-            </div>
+            <VirgilVault />
             <UnifiedButton
               to="/demo"
               label="Explore Demo"
-              className="yellow-round-button"
+              className="yellow-round-button-test"
               external={true}
               style={{
-                backgroundColor: "transparent",
+                marginTop: "30px",
               }}
             />
           </div>

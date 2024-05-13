@@ -62,6 +62,26 @@ body {
   margin-bottom: 100px;
 }
 
+.carousel-container {
+  width: 80%; /* Set width to 80% of the parent container */
+  margin: 0 auto; /* Center the carousel horizontally */
+}
+
+.slick-slider {
+  max-height: 70vh !important;
+}
+
+.slicker-dot {
+  bottom: 25px !important;
+}
+
+.virgil-vault-carousel-container {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-us-text-container {
   display: flex;
   flex-direction: column;
@@ -278,6 +298,17 @@ html {
   background: #ffde62;
   border: none;
   font-size: 16px;
+}
+
+.yellow-round-button-test {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 50px;
+  background: #ffde62;
+  border: none;
+  font-size: 16px;
+  margin-top: 30px;
 }
 
 .yellow-rectangular-button {
@@ -565,11 +596,14 @@ button.cta-button {
   height: auto;
   margin: 10px auto;
 }
-
 .virgil-voyage-overall-holder {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0; /* Set to the viewport top */
+  z-index: 1000; /* Make sure it sits above other content */
 }
 
 .cta-button-voyage {
@@ -677,4 +711,38 @@ button.cta-button {
   font-size: 40px;
   background-color: transparent;
   border: none;
+}
+
+/* Targeting both normal and disabled control arrows */
+.control-arrow.control-prev,
+.control-arrow.control-next,
+.control-arrow.control-disabled {
+  color: black !important; /* Ensures the icon color is black, not white as your comment states */
+  opacity: 1 !important; /* Set opacity to full to ensure visibility */
+  border: none !important; /* Removes any border */
+  background: #fff !important; /* Adds a light background to increase visibility */
+}
+
+.control-arrow:hover {
+  background: #333 !important; /* Darker background on hover */
+  opacity: 1 !important; /* Full opacity on hover */
+}
+
+.control-arrow::before {
+  content: ">"; /* Example content - you might use a different character or an icon font */
+  color: black !important; /* Ensure the arrow icon is black */
+  font-size: 26px; /* Adjust size as needed */
+  opacity: 1 !important; /* Ensure it is fully visible */
+}
+
+.control-arrow.control-next::before {
+  content: ">"; /* For 'next' arrow */
+}
+
+.control-arrow.control-prev::before {
+  content: "<"; /* For 'previous' arrow */
+}
+
+.control-arrow:hover::before {
+  color: #333 !important; /* Darker color on hover */
 }
