@@ -29,7 +29,7 @@
 }
 
 .carousel-card-image img {
-  width: 90%; /* Make the image responsive */
+  width: 100%; /* Make the image responsive */
   height: auto; /* Maintain aspect ratio */
   max-width: 100%;
 }
