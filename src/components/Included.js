@@ -12,7 +12,7 @@ const Included = () => {
         {" "}
         <div className="whats-included-individual-box">
           <div className="whats-included-individual-inner-box">
-            <span class="material-symbols-outlined whats-included-icon">
+            <span class="material-symbols-outlined whats-included-icon gradient-text">
               description
             </span>
             <p>Personal Historian</p>
@@ -20,7 +20,7 @@ const Included = () => {
         </div>
         <div className="whats-included-individual-box">
           <div className="whats-included-individual-inner-box">
-            <span class="material-symbols-outlined whats-included-icon">
+            <span class="material-symbols-outlined whats-included-icon gradient-text">
               draw
             </span>
             <p>Planning session with interviewee</p>
@@ -29,10 +29,19 @@ const Included = () => {
         <div className="whats-included-individual-box">
           {" "}
           <div className="whats-included-individual-inner-box">
-            <span class="material-symbols-outlined whats-included-icon">
+            <span class="material-symbols-outlined whats-included-icon gradient-text">
               communication
             </span>
             <p>Four weekly one-on-one interview sessions</p>
+          </div>{" "}
+        </div>
+        <div className="whats-included-individual-box">
+          {" "}
+          <div className="whats-included-individual-inner-box">
+            <span class="material-symbols-outlined whats-included-icon gradient-text">
+              graphic_eq
+            </span>
+            <p>High-fidelity audio of their voice</p>
           </div>{" "}
         </div>
       </div>
@@ -40,16 +49,7 @@ const Included = () => {
         <div className="whats-included-individual-box">
           {" "}
           <div className="whats-included-individual-inner-box">
-            <span class="material-symbols-outlined whats-included-icon">
-              graphic_eq
-            </span>
-            <p>High-fidelity audio of their voice</p>
-          </div>{" "}
-        </div>
-        <div className="whats-included-individual-box">
-          {" "}
-          <div className="whats-included-individual-inner-box">
-            <span class="material-symbols-outlined whats-included-icon">
+            <span class="material-symbols-outlined whats-included-icon gradient-text">
               chrome_reader_mode
             </span>
             <p>Their story edited into life chapters</p>
@@ -58,10 +58,28 @@ const Included = () => {
         <div className="whats-included-individual-box">
           {" "}
           <div className="whats-included-individual-inner-box">
-            <span class="material-symbols-outlined whats-included-icon">
-              diversity_1
+            <span class="material-symbols-outlined whats-included-icon gradient-text">
+              history_edu
             </span>{" "}
             <p>An Immersive Virgil Vault chronicling their life</p>
+          </div>{" "}
+        </div>
+        <div className="whats-included-individual-box">
+          {" "}
+          <div className="whats-included-individual-inner-box">
+            <span class="material-symbols-outlined whats-included-icon gradient-text">
+              groups
+            </span>{" "}
+            <p>Shareable with your entire family</p>
+          </div>{" "}
+        </div>
+        <div className="whats-included-individual-box">
+          {" "}
+          <div className="whats-included-individual-inner-box">
+            <span class="material-symbols-outlined whats-included-icon gradient-text">
+              security
+            </span>{" "}
+            <p>Safe, secure, and private to your family</p>
           </div>{" "}
         </div>
       </div>
