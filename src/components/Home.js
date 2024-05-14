@@ -464,7 +464,7 @@ function Home() {
                 height: "auto",
                 borderRadius: "20px", // Apply border radius to image
               }}
-              alt="Description of the image"
+              alt="D"
             />
             <div
               style={{
