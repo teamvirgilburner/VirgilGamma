@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CarouselCard from "./CarouselCard";
 // import MargaretThompson from "../images/margaret-thompson.png";
@@ -9,6 +9,8 @@ import c4 from "../images/carousel_images/c4.png";
 import c5 from "../images/carousel_images/c5.png";
 import c6 from "../images/carousel_images/c6.png";
 import c7 from "../images/carousel_images/c7.png";
+import c8 from "../images/carousel_images/c8.png";
+
 // import MargaretThompsonLarge from "../images/m-thompson-large.png"
 // import bettyHeadshot from "../images/betty_headshot.png";
 
@@ -19,6 +21,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Demo.css";
 
 const LifeChapters = () => {
+  const cardRefs = useRef([]);
+
   const headingRef = useRef(null);
 
   const navigate = useNavigate();
@@ -26,6 +30,8 @@ const LifeChapters = () => {
   const goToEarlyLife = () => {
     navigate("/early-life");
   };
+
+  const [maxHeight, setMaxHeight] = useState(0);
 
   const styling = {
     color: "black",
@@ -90,7 +96,7 @@ const LifeChapters = () => {
       title: "Education & | Teenage Years",
       features: [
         "Advanced Studies",
-        "Cultural and Social Development",
+        "Cultural Development",
         "Developing Independence",
       ],
       buttonText: "Coming Soon!",
@@ -148,7 +154,7 @@ const LifeChapters = () => {
     {
       id: 7,
       imageUrl: c7,
-      years: "2001-Present",
+      years: "2001-2022",
       title: "Reflection & Legacy",
       features: [
         "Reflecting on Life Lessons",
@@ -159,13 +165,23 @@ const LifeChapters = () => {
     },
     {
       id: 8,
+      imageUrl: c8,
+      years: "2023",
+      title: "Betty's Passing",
+      features: [
+        "Hear loved ones share their memories and reflections on Betty's incredible life",
+      ],
+      buttonText: "Coming Soon!",
+    },
+    {
+      id: 9,
       imageUrl: "",
       years: "",
       title: "",
       features: [],
     },
     {
-      id: 9,
+      id: 10,
       imageUrl: "",
       years: "",
       title: "",
@@ -178,6 +194,14 @@ const LifeChapters = () => {
   const [deviceType, setDeviceType] = useState("desktop");
 
   const [currentTab, setCurrentTab] = useState("");
+
+  useLayoutEffect(() => {
+    const heights = cardRefs.current.map((ref) =>
+      ref ? ref.getBoundingClientRect().height : 0
+    );
+    setMaxHeight(Math.max(...heights));
+    console.log(maxHeight);
+  }, [items]);
 
   function showContent(tabName) {
     if (currentTab !== tabName) {
@@ -228,6 +252,8 @@ const LifeChapters = () => {
                 <div
                   className={`item ${isCenter ? "center" : ""}`}
                   key={item.id}
+                  ref={(el) => (cardRefs.current[index] = el)}
+                  style={{ height: maxHeight }} // Set the max height to each card
                 >
                   <CarouselCard
                     years={item.years}
