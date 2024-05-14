@@ -21,8 +21,6 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Demo.css";
 
 const LifeChapters = () => {
-  const cardRefs = useRef([]);
-
   const headingRef = useRef(null);
 
   const navigate = useNavigate();
@@ -30,8 +28,6 @@ const LifeChapters = () => {
   const goToEarlyLife = () => {
     navigate("/early-life");
   };
-
-  const [maxHeight, setMaxHeight] = useState(0);
 
   const styling = {
     color: "black",
@@ -195,14 +191,6 @@ const LifeChapters = () => {
 
   const [currentTab, setCurrentTab] = useState("");
 
-  useLayoutEffect(() => {
-    const heights = cardRefs.current.map((ref) =>
-      ref ? ref.getBoundingClientRect().height : 0
-    );
-    setMaxHeight(Math.max(...heights));
-    console.log(maxHeight);
-  }, [items]);
-
   function showContent(tabName) {
     if (currentTab !== tabName) {
       setCurrentTab(tabName);
@@ -252,8 +240,6 @@ const LifeChapters = () => {
                 <div
                   className={`item ${isCenter ? "center" : ""}`}
                   key={item.id}
-                  ref={(el) => (cardRefs.current[index] = el)}
-                  style={{ height: maxHeight }} // Set the max height to each card
                 >
                   <CarouselCard
                     years={item.years}
