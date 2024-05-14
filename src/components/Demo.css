@@ -525,6 +525,7 @@ button {
 .search-suggestion-modal {
   display: flex;
   align-items: flex-end;
+  justify-content: space-around;
   margin: 0 auto;
   margin-top: 10px;
   border: 1px solid #ccc;
@@ -534,11 +535,6 @@ button {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer; /* Change cursor to pointer on hover */
   padding: 60px 10px;
-}
-
-.search-suggestion-modal-text {
-  margin: 0;
-  flex-grow: 1; /* This makes the text take up the remaining space */
 }
 
 .close {
