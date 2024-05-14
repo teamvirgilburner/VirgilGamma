@@ -51,6 +51,8 @@ const LifeChapters = () => {
     initialSlide: 1,
     centerMode: true,
     infinite: false,
+    swipe: false, // Disable swipe
+    touchMove: false, // Disable touch move
     centerPadding: "25px",
     slidesToShow: 3,
     speed: 500,

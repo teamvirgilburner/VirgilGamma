@@ -229,7 +229,12 @@ function Home() {
         >
           <div className="content-holder">
             <div className="title-holder">
-              <div className="title-background-grdient" style={{marginBottom: '-60px'}}> {/* Fix longterm */}
+              <div
+                className="title-background-grdient"
+                style={{ marginBottom: "-60px" }}
+              >
+                {" "}
+                {/* Fix longterm */}
                 <h1
                   style={{
                     fontSize: "48px",
@@ -294,7 +299,9 @@ function Home() {
                 <div className="virgil-vault-holder">
                   <div className="virgil-vault-header-holder">
                     <div className="virgil-vault-header">
-                      <h1 style={{ fontSize: "24px" }}>Virgil Voyage + Vault</h1>
+                      <h1 style={{ fontSize: "24px" }}>
+                        Virgil Voyage + Vault
+                      </h1>
                       <p>For your loved one</p>
                       <h1
                         clasName="virgil-vault-price"
@@ -359,8 +366,9 @@ function Home() {
                     </h1>
                     <p style={{ marginBottom: "15px" }}>
                       {" "}
-                      Virgil is currently at capacity -- if you're interested, consider joining the waitlist and
-                      we'll reach out when space becomes available.{" "}
+                      Virgil is currently at capacity -- if you're interested,
+                      consider joining the waitlist and we'll reach out when
+                      space becomes available.{" "}
                     </p>
                   </div>
                   <form onSubmit={handleSubmit} className="waitlist-form">
@@ -481,7 +489,7 @@ function Home() {
               <h1 style={{ fontSize: "40px", margin: "0", color: "#000" }}>
                 {" "}
                 {/* Adjust color as needed */}
-                Explore a Virgil Vault
+                Explore a <br></br>Virgil Vault
               </h1>
               <button
                 className="cta-button"

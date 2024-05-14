@@ -96,7 +96,7 @@ const Demo = () => {
       title: "Education & | Teenage Years",
       features: [
         "Advanced Studies",
-        "Cultural and Social Development",
+        "Cultural Development",
         "Develeping Independence",
       ],
       buttonText: "Coming Soon!",
