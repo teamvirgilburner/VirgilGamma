@@ -48,7 +48,7 @@ const VirgilVault = () => {
 
   const settings = {
     swipeToSlide: true,
-    initialSlide: 1,
+    initialSlide: 0,
     centerMode: true,
     infinite: true,
     dots: true,

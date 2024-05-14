@@ -137,7 +137,7 @@ const LifeChapters = () => {
       years: "1981-2000",
       title: "Later Career & Advocacy",
       features: [
-        "Continued Writing and TV Career",
+        "Writing and TV Career",
         "Family and Personal Life",
         "New Advocacy Efforts",
       ],

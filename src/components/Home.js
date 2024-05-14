@@ -229,7 +229,7 @@ function Home() {
         >
           <div className="content-holder">
             <div className="title-holder">
-              <div className="title-background-grdient">
+              <div className="title-background-grdient" style={{marginBottom: '-60px'}}> {/* Fix longterm */}
                 <h1
                   style={{
                     fontSize: "48px",
@@ -238,11 +238,10 @@ function Home() {
                   The Virgil Vault{" "}
                 </h1>
                 <p className="voyage-description">
-                  How we preserve their story for generations to come{" "}
+                  How we preserve their story for generations{" "}
                 </p>
               </div>
             </div>
-
             <VirgilVault />
             <UnifiedButton
               to="/demo"
@@ -295,7 +294,7 @@ function Home() {
                 <div className="virgil-vault-holder">
                   <div className="virgil-vault-header-holder">
                     <div className="virgil-vault-header">
-                      <h1 style={{ fontSize: "24px" }}>Virgil Vault</h1>
+                      <h1 style={{ fontSize: "24px" }}>Virgil Voyage + Vault</h1>
                       <p>For your loved one</p>
                       <h1
                         clasName="virgil-vault-price"
@@ -360,7 +359,7 @@ function Home() {
                     </h1>
                     <p style={{ marginBottom: "15px" }}>
                       {" "}
-                      Virgil is currently at capcity. Join the waitlist and
+                      Virgil is currently at capacity -- if you're interested, consider joining the waitlist and
                       we'll reach out when space becomes available.{" "}
                     </p>
                   </div>
