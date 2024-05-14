@@ -67,7 +67,7 @@ const VirgilVoyage = () => {
           </div>
           <h2 className="virgil-voyage-card-header">
             {" "}
-            Your contribute your memories
+            You contribute your memories
           </h2>
           <p className="virgil-voyage-card-content">
             {" "}
