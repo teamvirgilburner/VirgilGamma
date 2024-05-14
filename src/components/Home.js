@@ -464,6 +464,7 @@ function Home() {
                 height: "auto",
                 borderRadius: "20px", // Apply border radius to image
               }}
+              alt="ate text"
             />
             <div
               style={{
