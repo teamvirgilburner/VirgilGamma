@@ -505,6 +505,10 @@ function Home() {
               >
                 Try it out
               </button>
+              <span className="contact-us"> Questions? Contact us! </span>
+              <p>
+                <a href="mailto: info@virgil.bio">info@virgil.bio</a>
+              </p>
             </div>
           </div>
         </Element>
