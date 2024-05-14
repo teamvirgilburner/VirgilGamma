@@ -4,16 +4,17 @@ import { Link, Element } from "react-scroll";
 import VirgilVoyage from "./VirgilVoyage";
 import Included from "./Included";
 import UnifiedButton from "./UnifiedButton";
+import VirgilVault from "./VirgilVault";
+import ExplorVaultBG from "../images/explore-vault-bg.png";
 
 import { firestore } from "../firebase";
 import { addDoc, collection } from "firebase/firestore";
-import VirgilVaultImage from "../images/the-virgil-vault.png";
 
 import whatsIncludedBigBg from "../images/whats-included-big-bg.png";
 import downArrow from "../images/down-arrow.png";
 import newLandingImage from "../images/new-landing-image.png";
-import leftMacbook from "../images/left.png";
-import rightMacbook from "../images/right.png";
+
+import CalendlyButton from "./plugins/CalendlyModule";
 
 import "./Home.css"; // Assume you have corresponding CSS for styling
 import { toast, ToastContainer } from "react-toastify";
@@ -65,6 +66,17 @@ function Home() {
     setSelectedValue(event.target.value); // Update the state with new value
     console.log(event.target.value);
   };
+
+  // function isElementCentered(elem) {
+  //   const rect = elem.getBoundingClientRect();
+  //   const elemCenter = (rect.top + rect.bottom) / 2;
+  //   const viewportCenter = window.innerHeight / 2;
+  //   const isCentered = Math.abs(elemCenter - viewportCenter) <= 50; // Consider centered if within 50px of viewport center
+  //   console.log(
+  //     `Element center: ${elemCenter}, Viewport center: ${viewportCenter}, Is centered: ${isCentered}`
+  //   );
+  //   return isCentered;
+  // }
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -157,8 +169,8 @@ function Home() {
                 can.
               </h1>
               <p className="feature-description">
-                The Virgil Vault is a digital biography that preserves your
-                loved one's life story - in their own voice.
+                The Virgil Vault is a digital memoir that preserves your loved
+                one's life story - in their own voice.
               </p>
               <div className="about-us-buttons-container">
                 <UnifiedButton
@@ -205,7 +217,7 @@ function Home() {
                 </p>
               </div>
             </div>
-            <div className="virgil-voyage-holder">
+            <div className="virgil-voyage-holder" id="myCarousel">
               <VirgilVoyage />
             </div>
           </div>
@@ -231,30 +243,14 @@ function Home() {
               </div>
             </div>
 
-            <div className="about-us-flex-container">
-              <img
-                src={VirgilVaultImage}
-                alt="Grouped landing"
-                style={{ width: "60%", height: "auto" }}
-              />
-              <section className="virgil-vault-text-container">
-                <h1 style={{ fontSize: "32px", marginBottom: "20px" }}>
-                  Don't read their story. <br></br>
-                  Hear them tell it.
-                </h1>
-                <p className="vault-description">
-                  Your loved one’s voice is the center of the Virgil Vault — so
-                  you can preserve their authentic personality forever.
-                </p>
-              </section>
-            </div>
+            <VirgilVault />
             <UnifiedButton
               to="/demo"
               label="Explore Demo"
-              className="yellow-round-button"
+              className="yellow-round-button-test"
               external={true}
               style={{
-                backgroundColor: "transparent",
+                marginTop: "30px",
               }}
             />
           </div>
@@ -347,8 +343,9 @@ function Home() {
                     </ul>
                     <br></br>
                     <br></br>
-                    <br></br>
-                    <br></br>
+                  </div>
+                  <div>
+                    <CalendlyButton/>
                   </div>
                 </div>
               </div>
@@ -455,38 +452,52 @@ function Home() {
         >
           <div
             style={{
-              backgroundColor: "#FFDE62",
-              borderRadius: "20px",
-              height: "80%",
-              width: "80%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              padding: "0",
+              position: "relative",
+              width: "100%", // Adjust width as needed
+              height: "auto",
             }}
           >
-            <img src={leftMacbook} alt="leftMacbook" />
+            <img
+              src={ExplorVaultBG}
+              style={{
+                width: "100%", // Ensure image takes up full width of the container
+                height: "auto",
+                borderRadius: "20px", // Apply border radius to image
+              }}
+            />
             <div
               style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
+                textAlign: "center",
               }}
             >
-              <h1 style={{ fontSize: "40px" }}>Explore a Virgil Vault</h1>
+              <h1 style={{ fontSize: "40px", margin: "0", color: "#000" }}>
+                {" "}
+                {/* Adjust color as needed */}
+                Explore a Virgil Vault
+              </h1>
               <button
                 className="cta-button"
                 onClick={goToDemo}
                 style={{
-                  backgroundColor: "transparent",
+                  marginTop: "10px",
+                  backgroundColor: "#FFDE62",
+                  border: "1px solid black",
+                  borderRadius: "5px",
                   fontSize: "16px",
+                  padding: "10px 20px",
                 }}
               >
                 Try it out
               </button>
             </div>
-            <img src={rightMacbook} alt="rightMacbook" />
           </div>
         </Element>
       </main>
