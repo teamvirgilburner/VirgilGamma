@@ -499,8 +499,8 @@ function Home() {
                   backgroundColor: "#FFDE62",
                   border: "1px solid black",
                   borderRadius: "5px",
-                  fontSize: "16px",
-                  padding: "10px 20px",
+                  fontSize: "20px",
+                  padding: "20px 40px",
                 }}
               >
                 Try it out
