@@ -85,7 +85,9 @@ const Demo = () => {
             <div className="tabs">
               <button
                 onClick={() => showContent("LifeChapters")}
-                className="tab-button"
+                className={` ${
+                  currentTab === "LifeChapters" ? "active-tab" : "tab-button"
+                }`}
               >
                 <span class="material-symbols-outlined">stack_star</span>
                 {/* Correct icon name */}
@@ -93,28 +95,36 @@ const Demo = () => {
               </button>
               <button
                 onClick={() => showContent("FamilyTree")}
-                className="tab-button"
+                className={` ${
+                  currentTab === "FamilyTree" ? "active-tab" : "tab-button"
+                }`}
               >
                 <span class="material-symbols-outlined">nature</span>
                 Family Tree
               </button>
               <button
                 onClick={() => showContent("Places")}
-                className="tab-button"
+                className={` ${
+                  currentTab === "Places" ? "active-tab" : "tab-button"
+                }`}
               >
                 <span class="material-symbols-outlined">map</span>
                 Places
               </button>
               <button
                 onClick={() => showContent("Favorites")}
-                className="tab-button"
+                className={` ${
+                  currentTab === "Favorites" ? "active-tab" : "tab-button"
+                }`}
               >
                 <span class="material-symbols-outlined">favorite</span>
                 Favorites
               </button>
               <button
                 onClick={() => showContent("Gallery")}
-                className="tab-button"
+                className={` ${
+                  currentTab === "Gallery" ? "active-tab" : "tab-button"
+                }`}
               >
                 <span class="material-symbols-outlined">gallery_thumbnail</span>
                 Gallery

@@ -12,6 +12,25 @@
   margin: 10% 4%;
 }
 
+.tab-button:hover {
+  background-color: #f0f0f0;
+}
+
+.active-tab {
+  background-color: #d3d3d3;
+  font-family: Poppins, sans-serif;
+  border-color: transparent;
+  font-weight: bolder;
+
+  margin-top: 15px;
+  line-height: 1.5; /*  /* Gray out the active tab */
+}
+
+.active-tab .material-symbols-outlined {
+  vertical-align: middle; /* Align the bottom of the icon with the baseline of the text */
+  margin-right: 8px; /* Optional: adds some space between the icon and the text */
+}
+
 .header {
   background-color: #fff;
 }

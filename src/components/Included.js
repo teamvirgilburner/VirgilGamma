@@ -13,9 +13,9 @@ const Included = () => {
         <div className="whats-included-individual-box">
           <div className="whats-included-individual-inner-box">
             <span class="material-symbols-outlined whats-included-icon gradient-text">
-              description
+              face_6
             </span>
-            <p>Personal Historian to guide you through the process</p>
+            <p>Personal Historian to guide through the process</p>
           </div>
         </div>
         <div className="whats-included-individual-box">
@@ -32,7 +32,7 @@ const Included = () => {
             <span class="material-symbols-outlined whats-included-icon gradient-text">
               communication
             </span>
-            <p>Four weekly one-on-one interview sessions</p>
+            <p>Four weekly 1:1 interview sessions</p>
           </div>{" "}
         </div>
         <div className="whats-included-individual-box">
@@ -52,7 +52,7 @@ const Included = () => {
             <span class="material-symbols-outlined whats-included-icon gradient-text">
               chrome_reader_mode
             </span>
-            <p>Their story edited into chronological life chapters</p>
+            <p>Their story edited into life chapters</p>
           </div>{" "}
         </div>
         <div className="whats-included-individual-box">
@@ -61,7 +61,7 @@ const Included = () => {
             <span class="material-symbols-outlined whats-included-icon gradient-text">
               history_edu
             </span>{" "}
-            <p>An Immersive Virgil Vault chronicling their life</p>
+            <p>An immersive, searchable Virgil Vault</p>
           </div>{" "}
         </div>
         <div className="whats-included-individual-box">
