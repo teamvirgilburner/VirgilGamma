@@ -345,7 +345,7 @@ function Home() {
                     <br></br>
                   </div>
                   <div>
-                    <CalendlyButton/>
+                    <CalendlyButton />
                   </div>
                 </div>
               </div>
@@ -464,6 +464,7 @@ function Home() {
                 height: "auto",
                 borderRadius: "20px", // Apply border radius to image
               }}
+              alt="Description of the image"
             />
             <div
               style={{
