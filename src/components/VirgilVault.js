@@ -59,7 +59,7 @@ const VirgilVault = () => {
     slidesToShow: 1,
     speed: 500,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 5000,
     pauseOnHover: true,
     pauseOnFocus: true,
     pauseOnDotsHover: true,
