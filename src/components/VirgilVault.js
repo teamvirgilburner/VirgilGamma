@@ -58,6 +58,11 @@ const VirgilVault = () => {
     centerPadding: "0px",
     slidesToShow: 1,
     speed: 500,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    pauseOnDotsHover: true,
   };
 
   const items = [
