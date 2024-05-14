@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import CarouselCard from "./CarouselCard";
 // import MargaretThompson from "../images/margaret-thompson.png";
