@@ -324,7 +324,7 @@ function Home() {
                       <br></br>
                       <li>
                         An interactive memoir that merges their voice with
-                        phots, videos, and more
+                        photos, videos, and more
                       </li>
                       <br></br>
 

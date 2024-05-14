@@ -97,7 +97,7 @@ const Demo = () => {
       features: [
         "Advanced Studies",
         "Cultural Development",
-        "Develeping Independence",
+        "Developing Independence",
       ],
       buttonText: "Coming Soon!",
       // goto: goToCollegeYears,

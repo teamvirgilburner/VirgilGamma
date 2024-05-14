@@ -91,7 +91,7 @@ const LifeChapters = () => {
       features: [
         "Advanced Studies",
         "Cultural and Social Development",
-        "Develeping Independence",
+        "Developing Independence",
       ],
       buttonText: "Coming Soon!",
       // goto: goToCollegeYears,
