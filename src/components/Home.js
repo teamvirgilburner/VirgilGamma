@@ -134,8 +134,8 @@ function Home() {
             <button onClick={goToHome} className="header-logo">
               Virgil
             </button>
-            <UnifiedButton to="#whats-included" label="What's included" />
             <UnifiedButton to="#the-virgil-voyage" label="How It Works" />
+            <UnifiedButton to="#whats-included" label="What's included" />
             <UnifiedButton
               to="/demo"
               label="Explore Demo"
@@ -208,7 +208,7 @@ function Home() {
           className="centered-flexbox"
           id="the-virgil-voyage"
         >
-          <div className="content-holder">
+          <div className="content-holder" style={{ marginBottom: "250px" }}>
             <div className="title-holder">
               <div className="title-background-grdient">
                 <h1 className="section-title">The Virgil Voyage</h1>
@@ -299,13 +299,16 @@ function Home() {
                 <div className="virgil-vault-holder">
                   <div className="virgil-vault-header-holder">
                     <div className="virgil-vault-header">
-                      <h1 style={{ fontSize: "24px" }}>
-                        Virgil Voyage + Vault
-                      </h1>
-                      <p>For your loved one</p>
+                      <div>
+                        {" "}
+                        <h1 style={{ fontSize: "24px" }}>
+                          Virgil Voyage + Virgil Vault
+                        </h1>
+                        <p>For your loved one</p>
+                      </div>
                       <h1
                         clasName="virgil-vault-price"
-                        style={{ fontSize: "36px", marginTop: "30px" }}
+                        style={{ fontSize: "36px" }}
                       >
                         $995
                       </h1>
@@ -341,13 +344,13 @@ function Home() {
                       <br></br>
 
                       <li>Safe, secure, and private to you and your family</li>
+
                       <br></br>
 
                       <li>
                         1 year of access to the Virgil Vault - then $79/yr
                       </li>
                     </ul>
-                    <br></br>
                     <br></br>
                   </div>
                   <div>
@@ -364,7 +367,7 @@ function Home() {
                     <h1 style={{ marginBottom: "10px" }}>
                       Don't wait. Capture their story today.
                     </h1>
-                    <p style={{ marginBottom: "15px" }}>
+                    <p style={{ marginBottom: "15px", fontSize: "16px" }}>
                       {" "}
                       Virgil is currently at capacity -- if you're interested,
                       consider joining the waitlist and we'll reach out when
@@ -400,12 +403,13 @@ function Home() {
                       />
                     </label>
                     <label>
-                      Whose story would you like to capture?
+                      Whose story would you like to capture? *
                       {/** make default value blank*/}
                       <input
                         type="text"
                         value={subject}
                         onChange={handleChangeSubject}
+                        required
                       />
                     </label>
                     <label>
@@ -434,18 +438,8 @@ function Home() {
                       </select>
                     </label>
                     <button type="submit" className="waitlist-button">
-                      Join Our Waitlist
+                      Ready to get started? Join our waitlist
                     </button>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <span> Questions? Feel free to send us a message! </span>
-                    <p>
-                      <a href="mailto: contact@virgil.bio">
-                        contact@virgil.bio
-                      </a>
-                    </p>
                   </form>
                 </div>
               </div>
