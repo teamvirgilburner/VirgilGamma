@@ -52,7 +52,7 @@ const VirgilVault = () => {
     swipeToSlide: true,
     initialSlide: 1,
     centerMode: true,
-    infinite: false,
+    infinite: true,
     dots: true,
     arrows: true,
     nextArrow: <SampleNextArrow />,
@@ -76,9 +76,9 @@ const VirgilVault = () => {
     {
       id: 1,
       imageUrl: VVI2,
-      heading: "Easy jump to specific chapters of their life.",
+      heading: "Easily jump to specific chapters of their life.",
       content:
-        "The Virgil Vault organizes your loved one's story into distinct chapters, each capture a unique phase of their life. ",
+        "The Virgil Vault organizes your loved one’s story into distinct chapters, each capturing a unique phase of their life.",
       years: "1938-1948",
       title: "Early Life in Ithaca",
       features: [
@@ -94,7 +94,7 @@ const VirgilVault = () => {
       imageUrl: VVI3,
       heading: "All of your family photos. All in one place. ",
       content:
-        "Every family member can contribute their photos, home videos, and documents - the Virgil Vault will magically place them in the approrpriate life chapter. ",
+        "Every family member can contribute their photos, home videos, and documents - the Virgil Vault will magically place them in the appropriate life chapter. ",
       years: "1949-1954",
       title: "Education & | Teenage Years",
       features: [
@@ -126,7 +126,7 @@ const VirgilVault = () => {
       imageUrl: VVI5,
       heading: "Get memory highlights delivered directly to you. ",
       content:
-        "Uncover hiddne stories and celebrate major milestones through daily, weekly, or monthly memory highlights delivered straight to your smartphone. ",
+        "Uncover hidden stories and celebrate major milestones through daily, weekly, or monthly memory highlights delivered straight to your smartphone. ",
       years: "1961-1970",
       title: "Professional | Writing Career",
       features: [
