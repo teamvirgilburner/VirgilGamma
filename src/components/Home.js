@@ -13,8 +13,6 @@ import { addDoc, collection } from "firebase/firestore";
 import whatsIncludedBigBg from "../images/whats-included-big-bg.png";
 import downArrow from "../images/down-arrow.png";
 import newLandingImage from "../images/new-landing-image.png";
-import leftMacbook from "../images/left.png";
-import rightMacbook from "../images/right.png";
 
 import "./Home.css"; // Assume you have corresponding CSS for styling
 import { toast, ToastContainer } from "react-toastify";
