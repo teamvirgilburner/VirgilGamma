@@ -311,6 +311,14 @@ html {
   margin-top: 30px;
 }
 
+.yellow-round-button:hover {
+  background-color: #cc8400; /* Darker shade for hover effect */
+}
+
+.transparent-round-button:hover {
+  background-color: #cc8400;
+}
+
 .yellow-rectangular-button {
   padding: 1rem 2rem;
   cursor: pointer;
@@ -320,6 +328,10 @@ html {
   background: #ffde62;
   border: none;
   font-size: 16px;
+}
+
+.yellow-rectangular-button:hover {
+  background-color: #cc8400; /* Darker shade for hover effect */
 }
 
 .transparent-round-button {
