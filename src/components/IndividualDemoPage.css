@@ -206,6 +206,9 @@ iframe {
   display: flex;
 }
 
+.demo-main-content {
+}
+
 .vertical-photo-holder {
   width: 40%; /* Allow the photo holder to take up 30% of the space */
   display: flex;

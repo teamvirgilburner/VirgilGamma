@@ -108,7 +108,7 @@ const EducationTeenage = () => {
         </a>{" "}
         to start your own journey.
       </div>
-      <main className="main-content">
+      <main className="demo-main-content">
         <div>
           <div>
             <div className="header-container">
