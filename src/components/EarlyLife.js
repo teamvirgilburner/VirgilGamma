@@ -138,10 +138,7 @@ const EarlyLife = () => {
                 <h1>1938-1956</h1>
               </div>
             </div>
-            <div
-              className="media-container"
-              style={{ maxWidth: "1120px", margin: "0 auto" }}
-            >
+            <div className="media-container">
               <div class="video-container">
                 <ReactPlayer
                   className="react-player fixed-bottom"

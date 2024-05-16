@@ -9,45 +9,7 @@ import ETY3 from "../images/chapter-pages/education-teenage-years/ETY3.png";
 import "./IndividualDemoPage.css";
 
 const EducationTeenage = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isWritingAndGrammarOpen, setIsWritingAndGrammarOpen] = useState(false);
-  const [isTheaterOpen, setIsTheaterOpen] = useState(false);
-
-  // const [selectedValue, setSelectedValue] = useState("Ballet Classes");
-
-  const toggleDropdown = () => setIsOpen(!isOpen);
-
-  const toggleDropdownWritingAndGrammar = () =>
-    setIsWritingAndGrammarOpen(!isWritingAndGrammarOpen);
-  const toggleDropdownTheater = () => setIsTheaterOpen(!isTheaterOpen);
-
-  // const handleOptionClick = (value) => {
-  //   setSelectedValue(value);
-  //   setIsOpen(false);
-  // };
-
   const headingRef = useRef(null);
-  const navigate = useNavigate();
-
-  const goToWaitList = () => {
-    navigate("/home#waitlist");
-  };
-
-  function SampleNextArrow(props) {
-    const { className, onClick } = props;
-    return (
-      <div className={className} style={{ ...styling }} onClick={onClick} />
-    );
-  }
-
-  const SamplePrevArrow2 = (props) => {
-    const { className, onClick } = props;
-    return (
-      <div className={className} onClick={onClick} style={{ ...styling }}>
-        hello
-      </div>
-    );
-  };
 
   const [playing, setPlaying] = useState(false);
   const [overlayVisible, setOverlayVisible] = useState(true);
@@ -55,22 +17,6 @@ const EducationTeenage = () => {
   const handleVideoStart = () => {
     setPlaying(true);
     setOverlayVisible(false);
-  };
-
-  const styling = {
-    color: "black",
-  };
-
-  const settings = {
-    initialSlide: 1,
-    centerMode: true,
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 3,
-    speed: 500,
-    arrows: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow2 />,
   };
 
   const [deviceType, setDeviceType] = useState("desktop");
