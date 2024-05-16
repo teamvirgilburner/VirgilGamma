@@ -207,15 +207,15 @@ iframe {
 }
 
 .demo-main-content {
+  margin-top: 40px;
 }
-
 .vertical-photo-holder {
   width: 40%; /* Allow the photo holder to take up 30% of the space */
   display: flex;
   flex-direction: column;
   overflow-y: auto; /* Enable vertical scrolling */
   align-items: flex-end;
-  max-height: 100vh;
+  max-height: 70vh;
   padding-right: 10px; /* Optional: Add some padding for better appearance */
 }
 
