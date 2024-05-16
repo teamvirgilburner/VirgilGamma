@@ -29,6 +29,10 @@ const LifeChapters = () => {
     navigate("/early-life");
   };
 
+  const goToEducationAndTeenageYears = () => {
+    navigate("/education-and-teenage-years");
+  };
+
   const styling = {
     color: "black",
   };
@@ -53,8 +57,6 @@ const LifeChapters = () => {
     initialSlide: 1,
     centerMode: true,
     infinite: false,
-    swipe: false, // Disable swipe
-    touchMove: false, // Disable touch move
     centerPadding: "25px",
     slidesToShow: 3,
     speed: 500,
@@ -95,8 +97,8 @@ const LifeChapters = () => {
         "Cultural Development",
         "Developing Independence",
       ],
-      buttonText: "Coming Soon!",
-      // goto: goToCollegeYears,
+      buttonText: "Learn More",
+      goto: goToEducationAndTeenageYears,
     },
     {
       id: 3,

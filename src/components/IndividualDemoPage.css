@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column; /* Stack name and location-date vertically */
   align-items: center; /* Center-align the items */
-  width: 80%;
+  width: 90%;
   margin: 20px auto;
 }
 
@@ -167,4 +167,71 @@
 iframe {
   border-radius: 20px; /* Rounded corners */
   border: none; /* Remove the default iframe border */
+}
+
+.media-container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.horizontal-media-container {
+  max-width: 90%;
+  margin: 0 auto;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  overflow: hidden; /* Prevent horizontal overflow */
+}
+
+.video-background-container {
+  width: 60%;
+}
+
+.individual-demo-page-content {
+  width: 100%;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  text-align: left;
+  font-size: 20px;
+}
+
+.no-overflow-body-container {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+}
+
+.vertical-photo-holder {
+  width: 40%; /* Allow the photo holder to take up 30% of the space */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Enable vertical scrolling */
+  align-items: flex-end;
+  max-height: 100vh;
+  padding-right: 10px; /* Optional: Add some padding for better appearance */
+}
+
+.individual-chapter-page-image {
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
 }

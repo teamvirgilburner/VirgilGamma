@@ -41,9 +41,7 @@ function CarouselCard({
         <div className="button-container">
           {isCenter && (
             <button
-              className={
-                buttonText === "Coming Soon!" ? "coming-soon" : "learn-more"
-              }
+              className={goto ? "learn-more" : "coming-soon"}
               onClick={goto}
             >
               <span className="button-text">{buttonText}</span>

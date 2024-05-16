@@ -58,7 +58,7 @@ function Home() {
   };
 
   const [currentWord, setCurrentWord] = useState("story");
-  const words = ["story", "voice", "legacy", "jokes", "wisdom", "laugh"];
+  const words = ["story", "voice", "jokes", "laugh"];
   const [fade, setFade] = useState(false);
 
   // Function to handle the change in dropdown
@@ -66,17 +66,6 @@ function Home() {
     setSelectedValue(event.target.value); // Update the state with new value
     console.log(event.target.value);
   };
-
-  // function isElementCentered(elem) {
-  //   const rect = elem.getBoundingClientRect();
-  //   const elemCenter = (rect.top + rect.bottom) / 2;
-  //   const viewportCenter = window.innerHeight / 2;
-  //   const isCentered = Math.abs(elemCenter - viewportCenter) <= 50; // Consider centered if within 50px of viewport center
-  //   console.log(
-  //     `Element center: ${elemCenter}, Viewport center: ${viewportCenter}, Is centered: ${isCentered}`
-  //   );
-  //   return isCentered;
-  // }
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -351,6 +340,8 @@ function Home() {
                         1 year of access to the Virgil Vault - then $79/yr
                       </li>
                     </ul>
+                    <br></br>
+                    <br></br>
                     <br></br>
                   </div>
                   <div>
