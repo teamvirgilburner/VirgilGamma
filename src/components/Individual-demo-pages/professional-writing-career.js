@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactPlayer from "react-player";
-import { useNavigate } from "react-router-dom";
 import Chapter1Video from "../../images/chapter1.mp4";
 import PWC1 from "../../images/chapter-pages/professional-writing-career/PWC1.png";
 import PWC2 from "../../images/chapter-pages/professional-writing-career/PWC2.png";

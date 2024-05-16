@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactPlayer from "react-player";
-import { useNavigate } from "react-router-dom";
 import Chapter1Video from "../images/chapter1.mp4";
 import ETY1 from "../images/chapter-pages/education-teenage-years/ETY1.png";
 import ETY2 from "../images/chapter-pages/education-teenage-years/ETY2.png";
