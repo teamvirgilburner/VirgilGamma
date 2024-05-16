@@ -197,7 +197,7 @@ function Home() {
           className="centered-flexbox"
           id="the-virgil-voyage"
         >
-          <div className="content-holder" style={{ marginBottom: "250px" }}>
+          <div className="content-holder" style={{ marginBottom: "50px" }}>
             <div className="title-holder">
               <div className="title-background-grdient">
                 <h1 className="section-title">The Virgil Voyage</h1>
