@@ -33,6 +33,14 @@ const LifeChapters = () => {
     navigate("/education-and-teenage-years");
   };
 
+  const goToEarlyCareerAndActing = () => {
+    navigate("/early-career-and-acting");
+  };
+
+  const goToProfessionalWritingCareer = () => {
+    navigate("/professional-writing-career");
+  };
+
   const styling = {
     color: "black",
   };
@@ -110,8 +118,8 @@ const LifeChapters = () => {
         "Realization and Shifts",
         "Transition to Writing",
       ],
-      buttonText: "Coming Soon!",
-      // goto: goToCareerCommunity,
+      buttonText: "Learn More",
+      goto: goToEarlyCareerAndActing,
     },
     {
       id: 4,
@@ -123,7 +131,8 @@ const LifeChapters = () => {
         "Skills Development",
         "Recognition and Setbacks",
       ],
-      buttonText: "Coming Soon!",
+      buttonText: "Learn More",
+      goto: goToProfessionalWritingCareer,
     },
     {
       id: 5,
