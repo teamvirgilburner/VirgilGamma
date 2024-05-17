@@ -197,7 +197,7 @@
   margin: 0 auto;
   border-radius: 25px;
   height: 75vh;
-  overflow: hidden; /* Ensures that anything outside this container is not visible */
+  overflow: auto; /* Ensures that anything outside this container is not visible */
 }
 
 .main-content {
@@ -516,7 +516,7 @@ button {
 
 .chapter-overlay {
   position: fixed;
-  color:rgb(222, 218, 218);
+  color: rgb(222, 218, 218);
   top: 0;
   left: 0;
   width: 100%;
@@ -527,7 +527,7 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
-  
+
   z-index: 10; /* Ensure the overlay is above other content */
 }
 
