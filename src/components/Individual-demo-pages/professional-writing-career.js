@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactPlayer from "react-player";
-import Chapter1Video from "../../images/chapter1.mp4";
+import ChapterVideo from "../../images/chapter4.mp4";
 import PWC1 from "../../images/chapter-pages/professional-writing-career/PWC1.png";
 import PWC2 from "../../images/chapter-pages/professional-writing-career/PWC2.png";
 import PWC3 from "../../images/chapter-pages/professional-writing-career/PWC3.png";
@@ -11,13 +11,13 @@ import "../IndividualDemoPage.css";
 const ProfessionalWritingCareer = () => {
   const headingRef = useRef(null);
 
-  const [playing, setPlaying] = useState(false);
-  const [overlayVisible, setOverlayVisible] = useState(true);
+  // const [playing, setPlaying] = useState(false);
+  // const [overlayVisible, setOverlayVisible] = useState(true);
 
-  const handleVideoStart = () => {
-    setPlaying(true);
-    setOverlayVisible(false);
-  };
+  // const handleVideoStart = () => {
+  //   setPlaying(true);
+  //   setOverlayVisible(false);
+  // };
 
   const [deviceType, setDeviceType] = useState("desktop");
 
@@ -73,9 +73,9 @@ const ProfessionalWritingCareer = () => {
                 <div class="video-container">
                   <ReactPlayer
                     className="react-player fixed-bottom"
-                    playing={playing}
-                    url={Chapter1Video}
-                    width="100%"
+                    // playing={playing}
+                    url={ChapterVideo}
+                    width="85%"
                     height="20%"
                     controls={true}
                     config={{
@@ -87,8 +87,8 @@ const ProfessionalWritingCareer = () => {
                       },
                     }}
                   />
-                  {overlayVisible && (
-                    <div className="overlay" onClick={handleVideoStart}>
+                  {/* {overlayVisible && (
+                    <div className="chapter-overlay" onClick={handleVideoStart}>
                       <div>
                         <span>
                           This is a sample of a Life Chapter in a Vault.{" "}
@@ -114,10 +114,10 @@ const ProfessionalWritingCareer = () => {
                         </span>
                       </div>
                     </div>
-                  )}
+                  )} */}
                 </div>
                 <div className="individual-demo-page-content">
-                  Grandma Betty worked for major magazines like Vogue and
+                  Betty worked for major magazines like Vogue and
                   McCall's, and authoring deeply personal and impactful books
                   that highlighted her experiences.
                 </div>

@@ -189,7 +189,7 @@ iframe {
 }
 
 .individual-demo-page-content {
-  width: 100%;
+  width: 85%;
   font-family: Poppins, sans-serif;
   font-size: 16px;
   text-align: left;
@@ -220,16 +220,22 @@ iframe {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
+  color:rgb(222, 218, 218);
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* Black with opacity */
+  font-size: 25px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  
+  z-index: 10; /* Ensure the overlay is above other content */
+}
+
+.react-player {
+  transform: scale(1.0); /* Scale the video to 80% of its original size */
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactPlayer from "react-player";
-import Chapter1Video from "../images/chapter1.mp4";
+import ChapterVideo from "../images/chapter2.mp4";
 import ETY1 from "../images/chapter-pages/education-teenage-years/ETY1.png";
 import ETY2 from "../images/chapter-pages/education-teenage-years/ETY2.png";
 import ETY3 from "../images/chapter-pages/education-teenage-years/ETY3.png";
@@ -73,7 +73,7 @@ const EducationTeenage = () => {
                   <ReactPlayer
                     className="react-player fixed-bottom"
                     playing={playing}
-                    url={Chapter1Video}
+                    url={ChapterVideo}
                     width="100%"
                     height="20%"
                     controls={true}
@@ -90,26 +90,7 @@ const EducationTeenage = () => {
                     <div className="overlay" onClick={handleVideoStart}>
                       <div>
                         <span>
-                          This is a sample of a Life Chapter in a Vault.{" "}
-                        </span>
-                        <br></br>
-                        <br></br>
-                        <span>
-                          In each Chapter, you will find a video interview of
-                          your loved one, as well as additional content about
-                          their life and experiences during this period.
-                        </span>
-                        <br></br>
-                        <br></br>
-                        <span>
-                          This content is uploaded by your family, as well as
-                          automatically retrieved from historical archives and
-                          databases.
-                        </span>
-                        <br></br>
-                        <br></br>
-                        <span>
-                          Click anywhere on the screen to begin your discovery!
+                          This is another example of a Life Chapter, click anywhere to start the video, and scroll through the photos. {" "}
                         </span>
                       </div>
                     </div>

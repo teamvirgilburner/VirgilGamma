@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactPlayer from "react-player";
-import Chapter1Video from "../../images/chapter1.mp4";
+import ChapterVideo from "../../images/chapter3.mp4";
 import ECA1 from "../../images/chapter-pages/early-career-and-acting/ECA1.png";
 import ECA2 from "../../images/chapter-pages/early-career-and-acting/ECA2.png";
 import "../IndividualDemoPage.css";
@@ -12,7 +12,8 @@ const EarlyCareerAndActing = () => {
   const [overlayVisible, setOverlayVisible] = useState(true);
 
   const handleVideoStart = () => {
-    setPlaying(true);
+    // setPlaying(true);
+    setPlaying(false);
     setOverlayVisible(false);
   };
 
@@ -71,8 +72,8 @@ const EarlyCareerAndActing = () => {
                   <ReactPlayer
                     className="react-player fixed-bottom"
                     playing={playing}
-                    url={Chapter1Video}
-                    width="100%"
+                    url={ChapterVideo}
+                    width="85%" /* Had to adjust width, subtitle was getting cut off based on the resolution */
                     height="20%"
                     controls={true}
                     config={{
@@ -85,29 +86,10 @@ const EarlyCareerAndActing = () => {
                     }}
                   />
                   {overlayVisible && (
-                    <div className="overlay" onClick={handleVideoStart}>
+                    <div className="chapter-overlay" onClick={handleVideoStart}>
                       <div>
                         <span>
-                          This is a sample of a Life Chapter in a Vault.{" "}
-                        </span>
-                        <br></br>
-                        <br></br>
-                        <span>
-                          In each Chapter, you will find a video interview of
-                          your loved one, as well as additional content about
-                          their life and experiences during this period.
-                        </span>
-                        <br></br>
-                        <br></br>
-                        <span>
-                          This content is uploaded by your family, as well as
-                          automatically retrieved from historical archives and
-                          databases.
-                        </span>
-                        <br></br>
-                        <br></br>
-                        <span>
-                          Click anywhere on the screen to begin your discovery!
+                          You've seen a few chapters now: feel free to explore on your own and start the video at your leisure!{" "}
                         </span>
                       </div>
                     </div>

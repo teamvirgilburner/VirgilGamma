@@ -133,12 +133,12 @@ const EarlyLife = () => {
                 <div className="name-heading">Betty Rollin</div>
               </div>
 
-              <div className="location-date-heading">
+              <div className="location-date-heading" style={{marginBottom: '-100px'}}> 
                 <h1>Early Life in New York</h1>
                 <h1>1938-1956</h1>
               </div>
             </div>
-            <div className="media-container">
+            <div className="media-container" style={{paddingTop: '0px'}}>
               <div class="video-container">
                 <ReactPlayer
                   className="react-player fixed-bottom"
@@ -147,6 +147,7 @@ const EarlyLife = () => {
                   width="100%"
                   height="80%"
                   controls={true}
+                  style={{transform: 'scale(0.75)'}}
                   config={{
                     file: {
                       attributes: {
@@ -157,21 +158,7 @@ const EarlyLife = () => {
                   }}
                 />
                 {overlayVisible && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
-                      background: "rgba(0, 0, 0, 0.5)",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      color: "white",
-                      fontSize: "24px",
-                      cursor: "pointer",
-                    }}
+                  <div className = "overlay"
                     onClick={handleVideoStart}
                   >
                     <div>
