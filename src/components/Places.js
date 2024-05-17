@@ -1,6 +1,5 @@
 import React from "react";
 import "./Places.css";
-import placesComingSoon from "../images/placesComingSoon.png";
 function PlacesPage() {
   return (
     <div

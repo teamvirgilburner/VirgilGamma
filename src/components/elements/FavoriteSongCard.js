@@ -23,7 +23,7 @@ function FavoriteSongCard({ imageUrl, heading, subheading, audioUrl }) {
       </div>
       <button className="play-button" onClick={handlePlay}>
         {musicPlaying === true ? (
-          <img src={PlayButton} alt="playButton" className="song-card-image" />
+          <img src={PauseButton} alt="playButton" className="song-card-image" />
         ) : (
           <img src={PlayButton} alt="playButton" className="song-card-image" />
         )}
