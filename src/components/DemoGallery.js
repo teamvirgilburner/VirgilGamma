@@ -1,11 +1,4 @@
 import React from "react";
-// { useState, useEffect, useRef } from "react";
-import leftTop from "../images/demo-gallery/left-top.png";
-import leftBottom from "../images/demo-gallery/left-bottom.png";
-import middleTop from "../images/demo-gallery/middle-top.png";
-import middleBottom from "../images/demo-gallery/middle-bottom.png";
-import rightTop from "../images/demo-gallery/right-top.png";
-import rightBottom from "../images/demo-gallery/right-bottom.png";
 import left1 from "../images/demo-gallery/left-1.png";
 import left2 from "../images/demo-gallery/left-2.png";
 import left3 from "../images/demo-gallery/left-3.png";
