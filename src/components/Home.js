@@ -58,7 +58,7 @@ function Home() {
   };
 
   const [currentWord, setCurrentWord] = useState("story");
-  const words = ["story", "voice", "jokes", "laugh"];
+  const words = ["stories", "voice", "legacy", "jokes", "laugh", "smile", "advice"];
   const [fade, setFade] = useState(false);
 
   // Function to handle the change in dropdown
@@ -152,7 +152,10 @@ function Home() {
                 Your parents can't live forever.
                 <br />
                 But their{" "}
-                <span className={fade ? "fade" : "fade-in"}>
+                <span 
+                  style={{ display: 'inline-block', width: '175px', textAlign: 'center', fontSize: '48px' }}
+                  className={fade ? "fade" : "fade-in"}
+                >
                   {currentWord}
                 </span>{" "}
                 can.
@@ -197,7 +200,7 @@ function Home() {
           className="centered-flexbox"
           id="the-virgil-voyage"
         >
-          <div className="content-holder" style={{ marginBottom: "50px" }}>
+          <div className="content-holder" style={{ marginBottom: "250px" }}>
             <div className="title-holder">
               <div className="title-background-grdient">
                 <h1 className="section-title">The Virgil Voyage</h1>
