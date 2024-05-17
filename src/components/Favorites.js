@@ -1,6 +1,23 @@
 import React from "react";
 import FavoritesCard from "./elements/FavoritesCard";
 import RecipeCard from "./elements/RecipeCard";
+import FavoriteFoodCard from "./elements/FavoriteFoodCard";
+import FavoriteSongCard from "./elements/FavoriteSongCard";
+
+/** food images */
+import GrilledCheese from "../images/demo-gallery/favorites/grilled-cheese.png";
+import Borscht from "../images/demo-gallery/favorites/borscht.png";
+import ApplePie from "../images/demo-gallery/favorites/apple-pie.png";
+import ChickenKiev from "../images/demo-gallery/favorites/chicken-kiev.png";
+import ClamChowder from "../images/demo-gallery/favorites/clam-chowder.png";
+import CheeseCake from "../images/demo-gallery/favorites/new-york-cheesecake.png";
+
+/** song images */
+import Imagine from "../images/demo-gallery/favorites/imagine.png";
+import Landslide from "../images/demo-gallery/favorites/landslide.png";
+import Nocturne from "../images/demo-gallery/favorites/nocturne.png";
+import BohemianRhapsody from "../images/demo-gallery/favorites/bohemian-rhapsody.png";
+
 /** places images */
 import SarahLawrenceCollege from "../images/demo-gallery/favorites/sarah-lawrence.png";
 import HomeReadingNook from "../images/demo-gallery/favorites/home-reading-nook.png";
@@ -21,10 +38,70 @@ import TheGraduate from "../images/demo-gallery/favorites/the-graduate.png";
 
 /** family recipe images and videos */
 import ClassicBorscht from "../images/demo-gallery/favorites/classic-borscht.png";
-import ApplePie from "../images/demo-gallery/favorites/homemade-apple-pie.png";
+import HomemadeApplePie from "../images/demo-gallery/favorites/homemade-apple-pie.png";
 import Chapter1Video from "../images/chapter1.mp4";
 
 function FavoritesPage() {
+  const favoriteFoods = [
+    {
+      id: 0,
+      heading: "American Grilled Cheese Sandwich",
+      imageUrl: GrilledCheese,
+    },
+    {
+      id: 1,
+      heading: "Borscht",
+      imageUrl: Borscht,
+    },
+    {
+      id: 2,
+      heading: "Apple Pie",
+      imageUrl: ApplePie,
+    },
+    {
+      id: 3,
+      heading: "Chicken Kiev",
+      imageUrl: ChickenKiev,
+    },
+    {
+      id: 4,
+      heading: "Clam Chowder",
+      imageUrl: ClamChowder,
+    },
+    {
+      id: 5,
+      heading: "New York Cheesecake",
+      imageUrl: CheeseCake,
+    },
+  ];
+
+  const favoriteSongs = [
+    {
+      id: 0,
+      heading: "Imagine",
+      subheading: "John Lennon",
+      imageUrl: Imagine,
+    },
+    {
+      id: 1,
+      heading: "Landslide",
+      subheading: "Fleetwood Mac",
+      imageUrl: Landslide,
+    },
+    {
+      id: 2,
+      heading: "Nocturne in E-flat major",
+      subheading: "Chopin",
+      imageUrl: Nocturne,
+    },
+    {
+      id: 3,
+      heading: "Bohemian Rhapsody",
+      subheading: "Queen",
+      imageUrl: BohemianRhapsody,
+    },
+  ];
+
   const favoritesPlaces = [
     {
       id: 0,
@@ -114,7 +191,7 @@ function FavoritesPage() {
       heading: "Homemade Apple Pie",
       subheading:
         "Borscht is a traditional beet soup that is hearty and flavorful, often served with a dollop of sour cream.",
-      imageUrl: ApplePie,
+      imageUrl: HomemadeApplePie,
       buttonText: "Coming Soon!",
     },
   ];
@@ -149,7 +226,30 @@ function FavoritesPage() {
     <div className="overall-favorites-container">
       <div className="category-container">
         <div className="category-header">Foods</div>
-        <div className="item-container"></div>
+        <div className="food-container">
+          {favoriteFoods.map((item, index) => {
+            return (
+              <FavoriteFoodCard
+                imageUrl={item.imageUrl}
+                heading={item.heading}
+              />
+            );
+          })}
+        </div>
+      </div>
+      <div className="category-container">
+        <div className="category-header">Songs</div>
+        <div className="item-container">
+          {favoriteSongs.map((item, index) => {
+            return (
+              <FavoriteSongCard
+                imageUrl={item.imageUrl}
+                heading={item.heading}
+                subheading={item.subheading}
+              />
+            );
+          })}
+        </div>
       </div>
       <div className="category-container">
         <div className="category-header">Places</div>
