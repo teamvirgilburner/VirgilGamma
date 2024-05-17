@@ -12,6 +12,7 @@ function FavoriteSongCard({ imageUrl, heading, subheading, audioUrl }) {
     if (audioUrl && audioRef.current) {
       if (musicPlaying) {
         audioRef.current.pause();
+        console.log(isLoading);
         setMusicPlaying(false);
       } else {
         setIsLoading(true);
