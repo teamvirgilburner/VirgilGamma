@@ -183,7 +183,7 @@ const DemoGallery = () => {
         <div className="gallery-image-container">
           <img
             src={right3}
-            alt="rightMacbook"
+            alt="vogue magazine"
             className="top-image gallery-image"
           />
           <div className="image-overlay">
@@ -197,7 +197,7 @@ const DemoGallery = () => {
           <img
             src={right4}
             alt="rightMacbook"
-            className="top-image gallery-image"
+            className="newspaper with betty's face"
           />
           <div className="image-overlay">
             <div className="gallery-heading">First, You Cry Newspaper</div>
@@ -207,7 +207,7 @@ const DemoGallery = () => {
         <div className="gallery-image-container">
           <img
             src={right5}
-            alt="rightMacbook"
+            alt="singing class"
             className="top-image gallery-image"
           />
           <div className="image-overlay">
