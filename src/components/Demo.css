@@ -111,7 +111,6 @@
   text-decoration-color: #000000;
   text-decoration-thickness: 3px;
   text-underline-offset: 6px;
-
 }
 
 .demo-header {
@@ -593,4 +592,52 @@ button {
 .close {
   cursor: pointer;
   margin-left: 10px; /* Adjust this if needed for spacing */
+}
+
+/** Places.js styling */
+.map-popup {
+  font-family: Poppins, sans-serif;
+}
+
+.popup-title {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+}
+
+.popup-description {
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  margin: 0.3em 0 !important;
+}
+
+.separator {
+  margin-bottom: 20px;
+}
+
+.legend {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  padding: 1px;
+  z-index: 1000; /* Make sure the legend is on top of the map */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  margin-right: 5px;
+  background-color: white;
+  font-family: Poppins, sans-serif;
+  padding: 5px 10px;
+}
+
+.legend-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
 }
