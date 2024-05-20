@@ -182,9 +182,10 @@ body {
 }
 
 .feature-description {
-  font-size: 24px;
+  font-size: 28px;
   width: 90%;
-  margin-bottom: 20px;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
 }
 
 .title {
@@ -273,6 +274,12 @@ html {
 .main-content {
   padding: 2rem;
   text-align: center;
+  margin-top: -3.5rem;
+}
+
+.main-content-demo {
+  padding: 0rem;
+  text-align: center;
 }
 
 .hero {
@@ -296,7 +303,7 @@ html {
   border-radius: 50px;
   background: #ffde62;
   border: none;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .yellow-round-button:hover {
@@ -356,7 +363,7 @@ html {
   border-radius: 50px;
   background: transparent;
   border: 2px solid #fc8703;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .cta-button {

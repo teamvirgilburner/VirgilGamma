@@ -9,19 +9,26 @@
 }
 
 .life-chapters-container {
-  margin: 10% 4%;
+  margin: 8% 4%;
 }
 
 .tab-button:hover {
-  background-color: #f0f0f0;
+  text-decoration: underline;
+  text-decoration-color: #fac504;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
 }
 
 .active-tab {
-  background-color: #d3d3d3;
+  /* background-color: #d3d3d3; */
+  background-color: transparent;
   font-family: Poppins, sans-serif;
   border-color: transparent;
   font-weight: bolder;
-
+  text-decoration: underline;
+  text-decoration-color: #fac504;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
   margin-top: 15px;
   line-height: 1.5; /*  /* Gray out the active tab */
 }
@@ -100,6 +107,11 @@
   font-weight: bolder;
   margin-top: 15px;
   line-height: 1.5; /* Adjusts the height of lines in the button, can help with alignment */
+  text-decoration: underline;
+  text-decoration-color: #000000;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+
 }
 
 .demo-header {
@@ -119,6 +131,7 @@
   font-size: 40px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .photo-and-name {
@@ -413,6 +426,7 @@ button {
   background-color: transparent;
   border: none;
   text-align: left;
+  cursor: pointer;
 }
 
 .search-result-item:last-child {
@@ -566,14 +580,14 @@ button {
   align-items: flex-end;
   justify-content: space-around;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 0px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px;
+  padding: 0px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer; /* Change cursor to pointer on hover */
-  padding: 60px 10px;
+  padding: 10px 10px;
 }
 
 .close {

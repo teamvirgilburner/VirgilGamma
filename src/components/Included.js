@@ -15,7 +15,7 @@ const Included = () => {
             <span class="material-symbols-outlined whats-included-icon gradient-text">
               face_6
             </span>
-            <p>Personal Historian to guide through the process</p>
+            <p>Personal Historian to guide you through the process</p>
           </div>
         </div>
         <div className="whats-included-individual-box">
@@ -32,7 +32,7 @@ const Included = () => {
             <span class="material-symbols-outlined whats-included-icon gradient-text">
               communication
             </span>
-            <p>Four weekly 1:1 interview sessions</p>
+            <p>Four weekly one-on-one interview sessions</p>
           </div>{" "}
         </div>
         <div className="whats-included-individual-box">

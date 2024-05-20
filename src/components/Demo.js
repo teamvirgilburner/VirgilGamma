@@ -79,7 +79,7 @@ const Demo = () => {
         </div>
         <SearchBar onSearch={handleSearch} />
       </div>
-      <main className="main-content">
+      <main className="main-content-demo">
         <div className="white-box-holder">
           <div className="tabs-holder">
             <div className="tabs">
