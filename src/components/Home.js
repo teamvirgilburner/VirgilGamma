@@ -92,6 +92,13 @@ function Home() {
     signInAnonymously(auth)
     .then(() => {
       console.log("User signed in anonymously");
+      console.log(data);
+      try {
+        addDoc(ref, data);
+      } catch (event) {
+        console.log(event);
+      }
+      
     })
     .catch((error) => {
       console.error("Anonymous sign-in error:", error);
@@ -106,13 +113,9 @@ function Home() {
       source: heardFrom,
     };
 
-    console.log(data);
+    
 
-    try {
-      addDoc(ref, data);
-    } catch (event) {
-      console.log(event);
-    }
+
     toast.success(
       <div>
         Thank you for your interest!
