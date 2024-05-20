@@ -57,7 +57,7 @@ function Home() {
     setMotivation(event.target.value);
   };
 
-  const [currentWord, setCurrentWord] = useState("story");
+  const [currentWord, setCurrentWord] = useState("stories");
   const words = ["stories", "voice", "legacy", "jokes", "laugh", "smile", "advice"];
   const [fade, setFade] = useState(false);
 
