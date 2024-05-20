@@ -44,16 +44,16 @@ const Places = () => {
   return (
     <div
       style={{
-        height: "57vh",
+        height: "60vh",
         width: "90%",
-        margin: "50px auto",
+        margin: "30px auto",
         overflowY: "hidden",
       }}
     >
       <MapContainer
-        center={[20, 0]}
+        center={[20, 10]}
         zoom={2}
-        style={{ height: "100vh", width: "100%" }}
+        style={{ height: "60vh", width: "100%" }}
         scrollWheelZoom={false} // Disable scroll wheel zoom
         minZoom={2}
         maxZoom={10}
