@@ -198,6 +198,7 @@ const DemoGallery = () => {
             src={right4}
             alt="rightMacbook"
             className="newspaper with betty's face"
+            style={{ width: "100%" }}
           />
           <div className="image-overlay">
             <div className="gallery-heading">First, You Cry Newspaper</div>
