@@ -62,7 +62,7 @@ const LifeChapters = () => {
   };
 
   const settings = {
-    initialSlide: 1,
+    initialSlide: 2,
     centerMode: true,
     infinite: false,
     centerPadding: "25px",
@@ -196,7 +196,7 @@ const LifeChapters = () => {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(2);
 
   const [deviceType, setDeviceType] = useState("desktop");
 
