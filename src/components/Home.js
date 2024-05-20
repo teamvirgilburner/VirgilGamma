@@ -59,7 +59,15 @@ function Home() {
   };
 
   const [currentWord, setCurrentWord] = useState("stories");
-  const words = ["stories", "voice", "legacy", "jokes", "laugh", "smile", "advice"];
+  const words = [
+    "stories",
+    "voice",
+    "legacy",
+    "jokes",
+    "laugh",
+    "smile",
+    "advice",
+  ];
   const [fade, setFade] = useState(false);
 
   // Function to handle the change in dropdown
@@ -90,19 +98,18 @@ function Home() {
     const auth = getAuth();
 
     signInAnonymously(auth)
-    .then(() => {
-      console.log("User signed in anonymously");
-      console.log(data);
-      try {
-        addDoc(ref, data);
-      } catch (event) {
-        console.log(event);
-      }
-      
-    })
-    .catch((error) => {
-      console.error("Anonymous sign-in error:", error);
-    });
+      .then(() => {
+        console.log("User signed in anonymously");
+        console.log(data);
+        try {
+          addDoc(ref, data);
+        } catch (event) {
+          console.log(event);
+        }
+      })
+      .catch((error) => {
+        console.error("Anonymous sign-in error:", error);
+      });
 
     let data = {
       email: email,
@@ -112,9 +119,6 @@ function Home() {
       motivation: motivation,
       source: heardFrom,
     };
-
-    
-
 
     toast.success(
       <div>
@@ -162,12 +166,17 @@ function Home() {
         <Element name="about-us" className="centered-flexbox" id="about-us">
           <div className="about-us-flex-container">
             <section className="about-us-text-container">
-              <h1 style={{ fontSize: "48px", marginBottom: "20px" }}>
+              <h1 style={{ fontSize: "2.8vw", marginBottom: "20px" }}>
                 Your parents can't live forever.
                 <br />
                 But their{" "}
-                <span 
-                  style={{ display: 'inline-block', width: '175px', textAlign: 'center', fontSize: '48px' }}
+                <span
+                  style={{
+                    display: "inline-block",
+                    width: "175px",
+                    textAlign: "center",
+                    fontSize: "48px",
+                  }}
                   className={fade ? "fade" : "fade-in"}
                 >
                   {currentWord}
@@ -214,7 +223,7 @@ function Home() {
           className="centered-flexbox"
           id="the-virgil-voyage"
         >
-          <div className="content-holder" style={{ marginBottom: "250px" }}>
+          <div className="content-holder" style={{ marginBottom: "7vh" }}>
             <div className="title-holder">
               <div className="title-background-grdient">
                 <h1 className="section-title">The Virgil Voyage</h1>

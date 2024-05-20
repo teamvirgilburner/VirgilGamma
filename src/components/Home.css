@@ -9,9 +9,33 @@ body {
   overflow-x: hidden; /* This prevents horizontal scrolling */
 }
 
+@media (max-width: 1200px) {
+  body {
+    font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 992px) {
+  body {
+    font-size: 1.6vw;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.4vw;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 1.2vw;
+  }
+}
+
 .unified-button {
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 1%;
   border-radius: 50px;
   font-family: "Open Sans", sans-serif;
   background-color: transparent;
@@ -46,11 +70,15 @@ body {
   font-size: 48px;
 }
 
+#about-us {
+  margin-top: 5vh;
+}
 .centered-flexbox {
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  min-height: 100vh; /* Take up the full viewport height */
+
+  min-height: 90vh; /* Take up the full viewport height */
   /*background: linear-gradient(to right, #ff7e5f, #feb47b);*/
 }
 
@@ -182,7 +210,7 @@ body {
 }
 
 .feature-description {
-  font-size: 28px;
+  font-size: 1.5vw;
   width: 90%;
   margin-bottom: 5rem;
   margin-top: 2rem;
