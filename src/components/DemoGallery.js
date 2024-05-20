@@ -27,26 +27,194 @@ const DemoGallery = () => {
   return (
     <div className="overall-image-holder">
       <div className="vertical-image-holder">
-        <img src={left1} alt="rightMacbook" className="top-image" />
-        <img src={left2} alt="rightMacbook" />
-        <img src={left3} alt="rightMacbook" />
-        <img src={left4} alt="rightMacbook" />
-        <img src={left5} alt="rightMacbook" />
+        <div className="gallery-image-container">
+          <img
+            src={left1}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">
+              Makeup Classes on Fifth Avenue
+            </div>
+            <div className="gallery-text">Uploaded by Aunt Patricia · 1940</div>
+          </div>
+        </div>
+        <div className="gallery-image-container">
+          <img
+            src={left2}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">Sorority Life in College</div>
+            <div className="gallery-text">Uploaded by Sarah Lewis · 1952</div>
+          </div>
+        </div>
+        <div className="gallery-image-container">
+          <img
+            src={left3}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">Television Journalist Career</div>
+            <div className="gallery-text">Uploaded by Aunt Patricia · 1960</div>
+          </div>
+        </div>
+        <div className="gallery-image-container">
+          <img
+            src={left4}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">Sarah Lawrence College</div>
+            <div className="gallery-text">Uploaded by Sarah Lewis · 1952</div>
+          </div>
+        </div>
+        <div className="gallery-image-container">
+          <img
+            src={left5}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">With Her Sorority Sisters</div>
+            <div className="gallery-text">Uploaded by Sarah Lewis · 1940</div>
+          </div>
+        </div>
       </div>
       <div className="vertical-image-holder">
-        <img src={mid1} alt="rightMacbook" className="top-image" />
-        <img src={mid2} alt="rightMacbook" />
-        <img src={mid3} alt="rightMacbook" />
-        <img src={mid4} alt="rightMacbook" />
-        <img src={mid5} alt="rightMacbook" />
-        <img src={mid6} alt="rightMacbook" />
+        <div className="gallery-image-container">
+          <img
+            src={mid1}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">Betty and Ida</div>
+            <div className="gallery-text">Uploaded by Aunt Patricia · 1938</div>
+          </div>
+        </div>
+        <div className="gallery-image-container">
+          <img
+            src={mid2}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">Ice Cream After Classes</div>
+            <div className="gallery-text">Uploaded by Aunt Patricia · 1941</div>
+          </div>
+        </div>
+        <div className="gallery-image-container">
+          <img
+            src={mid3}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">Writing Classes</div>
+            <div className="gallery-text">Uploaded by Aunt Patricia · 1946</div>
+          </div>
+        </div>
+        <div className="gallery-image-container">
+          <img
+            src={mid4}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">Speaking At A Conference</div>
+            <div className="gallery-text">
+              Uploaded by Harold Edwards · 1965
+            </div>
+          </div>
+        </div>
+        <div className="gallery-image-container">
+          <img
+            src={mid5}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">Acting in College</div>
+            <div className="gallery-text">Uploaded by Sarah Lewis · 1952</div>
+          </div>
+        </div>
+        <div className="gallery-image-container">
+          <img
+            src={mid6}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">Betty and Ida</div>
+            <div className="gallery-text">Uploaded by Aunt Patricia · 1940</div>
+          </div>
+        </div>
       </div>
       <div className="vertical-image-holder">
-        <img src={right1} alt="rightMacbook" className="top-image" />
-        <img src={right2} alt="rightMacbook" />
-        <img src={right3} alt="rightMacbook" />
-        <img src={right4} alt="rightMacbook" />
-        <img src={right5} alt="rightMacbook" />
+        <div className="gallery-image-container">
+          <img
+            src={right1}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">Gardening in Manhattan</div>
+            <div className="gallery-text">
+              Uploaded by Harold Edwards · 1973
+            </div>
+          </div>
+        </div>
+        <div className="gallery-image-container">
+          <img
+            src={right2}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">Sorority Life in College</div>
+            <div className="gallery-text">Uploaded by Sarah Lewis · 1952</div>
+          </div>
+        </div>
+        <div className="gallery-image-container">
+          <img
+            src={right3}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">Vogue Issue</div>
+            <div className="gallery-text">
+              Uploaded by Harold Edwards · 1966
+            </div>
+          </div>
+        </div>
+        <div className="gallery-image-container">
+          <img
+            src={right4}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">First, You Cry Newspaper</div>
+            <div className="gallery-text">Uploaded by Sarah Lewis · 1952</div>
+          </div>
+        </div>
+        <div className="gallery-image-container">
+          <img
+            src={right5}
+            alt="rightMacbook"
+            className="top-image gallery-image"
+          />
+          <div className="image-overlay">
+            <div className="gallery-heading">Singing Classes</div>
+            <div className="gallery-text">Uploaded by Aunt Patricia · 1945</div>
+          </div>
+        </div>
       </div>
     </div>
   );
