@@ -9,6 +9,7 @@ import ExplorVaultBG from "../images/explore-vault-bg.png";
 
 import { firestore } from "../firebase";
 import { addDoc, collection } from "firebase/firestore";
+import { getAuth, signInAnonymously } from "firebase/auth";
 
 import whatsIncludedBigBg from "../images/whats-included-big-bg.png";
 import downArrow from "../images/down-arrow.png";
@@ -86,6 +87,23 @@ function Home() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    const auth = getAuth();
+
+    signInAnonymously(auth)
+    .then(() => {
+      console.log("User signed in anonymously");
+      console.log(data);
+      try {
+        addDoc(ref, data);
+      } catch (event) {
+        console.log(event);
+      }
+      
+    })
+    .catch((error) => {
+      console.error("Anonymous sign-in error:", error);
+    });
+
     let data = {
       email: email,
       name: fullName,
@@ -95,13 +113,9 @@ function Home() {
       source: heardFrom,
     };
 
-    console.log(data);
+    
 
-    try {
-      addDoc(ref, data);
-    } catch (event) {
-      console.log(event);
-    }
+
     toast.success(
       <div>
         Thank you for your interest!
