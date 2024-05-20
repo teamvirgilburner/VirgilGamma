@@ -75,7 +75,7 @@ const Places = () => {
 
           return (
             <Marker key={idx} position={marker.coordinates} icon={icon}>
-              <Popup className="map-popup">
+              <Popup>
                 {marker.names.map((name, idx) => (
                   <React.Fragment key={idx}>
                     <strong className="popup-title">{name}</strong>
