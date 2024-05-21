@@ -69,7 +69,7 @@ const VirgilVault = () => {
     {
       id: 0,
       imageUrl: VVI1,
-      heading: "Don't read their story. Hear them tell it.",
+      heading: "Don't read their story. | Hear them tell it.",
       content:
         "Your loved one's voice is the center of the Virgil Vault - so you can preserve their authentic personality forever. ",
       years: "",
@@ -95,7 +95,7 @@ const VirgilVault = () => {
     {
       id: 2,
       imageUrl: VVI3,
-      heading: "All of your family photos. All in one place. ",
+      heading: "All of your family photos. | All in one place. ",
       content:
         "Every family member can contribute their photos, home videos, and documents - the Virgil Vault will magically place them in the appropriate life chapter. ",
       years: "1949-1954",
@@ -190,7 +190,12 @@ const VirgilVault = () => {
               />
               <section className="virgil-vault-text-container">
                 <h1 style={{ fontSize: "32px", marginBottom: "20px" }}>
-                  {item.heading}
+                  {item.heading.split("|").map((part, index) => (
+                    <React.Fragment key={index}>
+                      {part}
+                      {index !== item.heading.split("|").length - 1 && <br />}
+                    </React.Fragment>
+                  ))}
                 </h1>
                 <p className="vault-description">{item.content}</p>
               </section>

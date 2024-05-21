@@ -15,6 +15,7 @@ function SearchBar({ onSearch }) {
   const [videoModalVisible, setVideoModalVisible] = useState(false);
 
   const handleChange = (event) => {
+    setModalVisible(false);
     setSearchTerm(event.target.value);
   };
 
