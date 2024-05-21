@@ -1,0 +1,704 @@
+.slick-prev {
+  left: 3% !important;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 3% !important;
+  z-index: 1;
+}
+
+.life-chapters-container {
+  margin: 8% 4%;
+}
+
+.tab-button:hover {
+  text-decoration: underline;
+  text-decoration-color: #fac504;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
+.active-tab {
+  /* background-color: #d3d3d3; */
+  background-color: transparent;
+  font-family: Poppins, sans-serif;
+  border-color: transparent;
+  font-weight: bolder;
+  text-decoration: underline;
+  text-decoration-color: #fac504;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  margin-top: 15px;
+  line-height: 1.5; /*  /* Gray out the active tab */
+}
+
+.active-tab .material-symbols-outlined {
+  vertical-align: middle; /* Align the bottom of the icon with the baseline of the text */
+  margin-right: 8px; /* Optional: adds some space between the icon and the text */
+}
+
+.header {
+  background-color: #fff;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+
+.nav-link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+/* TestDemo.css */
+.item.center {
+  transform: scale(1.1); /* Make the center item larger */
+  transition: transform 0.5s ease;
+  z-index: 10; /* Ensure it sits above other slides */
+}
+
+.carousel-container .slick-slide {
+  transition: transform 0.5s ease;
+  margin-top: 30px;
+  margin-bottom: 30px; /* Adjust as needed */
+}
+
+.slide-slider {
+  height: auto;
+}
+
+.learn-more {
+  display: none; /* Hide button by default */
+  margin-top: 10px;
+}
+
+.item.center .learn-more {
+  display: block; /* Only display button in the center slide */
+}
+
+.banner {
+  background: linear-gradient(
+    to right,
+    #fee2c3,
+    #f6c062
+  ); /* Adjust the colors as needed */
+  padding: 20px 60px;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tab-button {
+  font-family: Poppins, sans-serif;
+  background-color: transparent;
+  border-color: transparent;
+  font-weight: bolder;
+  margin-top: 15px;
+  line-height: 1.5; /* Adjusts the height of lines in the button, can help with alignment */
+  text-decoration: underline;
+  text-decoration-color: #000000;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+}
+
+.demo-header {
+  display: flex;
+  direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 20px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.demo-header-logo {
+  font-family: Palatino Linotype, serif;
+  font-size: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.photo-and-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.demo-name {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.search-box {
+  font-family: "Poppins", sans-serif;
+}
+
+.tab-button .material-symbols-outlined {
+  vertical-align: middle; /* Align the bottom of the icon with the baseline of the text */
+  margin-right: 8px; /* Optional: adds some space between the icon and the text */
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  align-items: space-between;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.tabs-holder {
+  margin-top: 10px;
+}
+
+.demo-page {
+  background-color: #f5f5f5;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.vertical-image-holder {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px;
+  width: 30%;
+}
+
+.overall-image-holder {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  justify-content: center;
+  overflow-y: auto;
+  height: 90%;
+  padding: 40px;
+  /*width: 100%;  Ensure this container is the full width it's allowed, but no more */
+  /*max-width: 100vw; /* Prevents the container from extending beyond the view width */
+}
+
+.vertical-image-holder img {
+  margin-bottom: 10px;
+}
+
+.family-tree-photo {
+  height: 85%;
+  width: auto;
+  margin-top: 2%;
+}
+
+.white-box-holder {
+  background-color: white;
+  border-color: black;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 25px;
+  height: 75vh;
+  overflow: auto; /* Ensures that anything outside this container is not visible */
+}
+
+.main-content {
+  padding: 0;
+  min-height: 100vh; /* Take up the full viewport height */
+}
+
+p,
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #ffefb5;
+  width: 100%;
+  padding: 100px;
+  text-align: left;
+}
+
+.sub-heading-container {
+  width: 70%;
+}
+
+.main-heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 72px;
+  margin: 0;
+  text-align: left; /* Center the title text */
+}
+
+.sub-heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  text-align: left; /* Center the subtitle text */
+  margin-top: 20px; /* Add space between title and subtitle */
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  margin-top: 60px;
+  max-width: 1200px; /* Limit the width and center it */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  width: 50%;
+  margin-left: 60px;
+}
+
+.heading-img {
+  border-radius: 10px;
+}
+
+/* Image styles */
+.overall-heading-container img {
+  width: 20%; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Match the border-radius from the screenshot */
+}
+
+.top-half {
+  width: 100%;
+  height: 50%; /* Height to cover the top half */
+  background-color: #ffccbc; /* Color for the top half */
+}
+
+.overall-heading-container {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    #ffefb5 0%,
+    #ffefb5 50%,
+    #ffffff 50%,
+    #ffffff 100%
+  );
+}
+
+.heading-text-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-right: 10px;
+}
+
+.heading-content-container {
+  text-align: left;
+  width: 80%;
+  border: 2px solid rgb(222, 218, 218);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+.heading-title-container {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+/* Additional styling for arrow containers if needed */
+.slick-prev,
+.slick-next {
+  background-color: transparent; /* Example to remove any background styling */
+  /* Other styles as necessary */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important; /* Choose the color you want for the arrows */
+  font-size: 40px !important;
+}
+
+/* Searchbar.js */
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  flex-grow: 1; /* Makes the input field expand to fill the form width */
+  padding: 8px 10px;
+  width: 300px;
+  border: 0.5px solid #f5f5f5;
+  font-family: Poppins, sans-serif;
+  border-radius: 4px;
+  font-size: 186x; /* Adjust font size as needed */
+}
+
+.search-input:focus {
+  outline: none; /* Optional: Removes the default focus outline */
+}
+
+.search-bar-container {
+  margin: 20px;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.search-results {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-result-item {
+  display: flex;
+  align-items: start;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.search-result-item:last-child {
+  margin-bottom: 0;
+}
+
+.result-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.result-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.result-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.search-box-result-holder {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%; /* Position below the search bar */
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.result-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.result-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.result-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Ensure the overlay is above other content */
+}
+
+.chapter-overlay {
+  position: fixed;
+  color: rgb(222, 218, 218);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75); /* Black with opacity */
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  z-index: 10; /* Ensure the overlay is above other content */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.search-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Ensure the overlay is above other content */
+}
+
+.search-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.search-suggestion-modal {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 0px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer; /* Change cursor to pointer on hover */
+  padding: 10px 10px;
+}
+
+.close {
+  cursor: pointer;
+  margin-left: 10px; /* Adjust this if needed for spacing */
+}
+
+/** Places.js styling */
+.map-popup {
+  font-family: Poppins, sans-serif;
+}
+
+.popup-title {
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+}
+
+.popup-description {
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  margin: 0.3em 0 !important;
+}
+
+.separator {
+  margin-bottom: 20px;
+}
+
+.legend {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  padding: 1px;
+  z-index: 1000; /* Make sure the legend is on top of the map */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: white;
+  font-family: Poppins, sans-serif;
+  padding: 5px 10px;
+}
+
+.legend-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+.leaflet-popup-content-wrapper {
+  position: relative;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* DemoGallery.js styling */
+.gallery-image-container {
+  position: relative;
+  width: 100%; /* Adjust based on your requirements */
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallery-image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.gallery-heading {
+  color: white;
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  padding: 0px 10px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.gallery-text {
+  color: white;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  padding: 0px 10px;
+  margin-left: 10px;
+}

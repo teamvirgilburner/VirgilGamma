@@ -1,0 +1,20 @@
+.consultation-button {
+      width: 100%;
+      background-color: transparent; /* Orange color for the button */
+      border-color: #cc8400;
+      color: black;
+      font-weight: bold;
+      font-family: "Open Sans", sans-serif;
+      padding: 15px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+      border: 2px solid #cc8400;      
+      transition: background-color 0.3s ease;
+}
+
+.consultation-button:hover {
+background-color: #cc8400; /* Darker shade for hover effect */
+}
