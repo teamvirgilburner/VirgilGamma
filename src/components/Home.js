@@ -173,9 +173,9 @@ function Home() {
                 <span
                   style={{
                     display: "inline-block",
-                    width: "175px",
+                    width: "25%",
                     textAlign: "center",
-                    fontSize: "48px",
+                    fontSize: "2.8vw",
                   }}
                   className={fade ? "fade" : "fade-in"}
                 >
