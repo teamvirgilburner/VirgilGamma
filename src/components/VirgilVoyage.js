@@ -3,8 +3,7 @@ import vv1 from "../images/virgil-voyage/vv1.png";
 import vv2 from "../images/virgil-voyage/vv2.png";
 import vv3 from "../images/virgil-voyage/vv3.png";
 import vv4 from "../images/virgil-voyage/vv4.png";
-import vv5 from "../images/virgil-voyage/vv5.png";
-// import { Link, Element } from "react-scroll";
+//import vv5 from "../images/virgil-voyage/vv5.png";
 
 import "react-multi-carousel/lib/styles.css";
 import "slick-carousel/slick/slick.css";
@@ -26,9 +25,9 @@ const VirgilVoyage = () => {
           </h2>
           <p className="virgil-voyage-card-content">
             {" "}
-            Our professional historians are trained to patiently guide your
-            loved one through a series of conversational interviews via video
-            chat.{" "}
+            During your planning session, you’ll outline the key life events,
+            important questions, and specific memories you wish to be covered in
+            the interviews.{" "}
           </p>
           <img
             src={vv1}
@@ -49,8 +48,9 @@ const VirgilVoyage = () => {
           </h2>
           <p className="virgil-voyage-card-content">
             {" "}
-            In just four weekly interview sessions, our historian will work with
-            your loved one to capture the complete narrative of their life.
+            In just four interview sessions via video chat, our historian will
+            work with your loved one to capture the complete story of their
+            life.
           </p>
           <img
             src={vv2}
@@ -103,7 +103,7 @@ const VirgilVoyage = () => {
           />
         </div>
       </div>
-      <div className="virgil-voyage-card">
+      {/*<div className="virgil-voyage-card">
         <div className="virgil-voyage-card-inner-holder">
           <div className="number-holder">
             {" "}
@@ -125,7 +125,7 @@ const VirgilVoyage = () => {
             className="voyage-card-img"
           />
         </div>
-      </div>
+      </div>*/}
     </div>
   );
 };
