@@ -86,7 +86,11 @@ function SearchBar({ onSearch }) {
         {modalVisible && (
           <div className="modal-overlays">
             <div className="search-results search-suggestion-modal">
-              <p className="search-suggestion-modal-text" onClick={closeModal}>
+              <p
+                className="search-suggestion-modal-text gradient-text"
+                style={{ fontWeight: "bolder" }}
+                onClick={closeModal}
+              >
                 Try searching for "piano lessons"
               </p>
               <p
