@@ -173,7 +173,7 @@ function Home() {
                 <span
                   style={{
                     display: "inline-block",
-                    width: "25%",
+                    width: "175px",
                     textAlign: "center",
                     fontSize: "2.8vw",
                   }}
