@@ -10,9 +10,15 @@ import Chapter1Video from "../images/chapter1.mp4";
 function SearchBar({ onSearch }) {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
+  const [openSearchResult, setOpenSearchResult] = useState(false);
   const [results, setResults] = useState([]);
   const [modalVisible, setModalVisible] = useState(false);
   const [videoModalVisible, setVideoModalVisible] = useState(false);
+  const [playing, setPlaying] = useState(true);
+
+  const handleVideoClick = () => {
+    setPlaying((prevPlaying) => !prevPlaying);
+  };
 
   const handleChange = (event) => {
     setModalVisible(false);
@@ -20,6 +26,7 @@ function SearchBar({ onSearch }) {
   };
 
   const openVideoModal = (event) => {
+    setOpenSearchResult(false);
     setVideoModalVisible(true);
   };
 
@@ -53,6 +60,7 @@ function SearchBar({ onSearch }) {
           onClick: openVideoModal,
         },
       ]);
+      setOpenSearchResult(true);
     } else {
       setResults([]);
     }
@@ -105,14 +113,14 @@ function SearchBar({ onSearch }) {
         )}
       </form>
       {videoModalVisible && (
-        <div className="modal-overlay" onClick={closeVideoModal}>
+        <div className="modal-overlay" onClick={handleVideoClick}>
           <div className="modal-content">
             <span className="close" onClick={closeVideoModal}>
               &times;
             </span>
             <ReactPlayer
               className="react-player fixed-bottom"
-              playing={true}
+              playing={playing}
               url={Chapter1Video}
               width="100%"
               height="80%"
@@ -129,7 +137,7 @@ function SearchBar({ onSearch }) {
           </div>
         </div>
       )}
-      {results.length > 0 && (
+      {openSearchResult && results.length > 0 && (
         <div className="search-results">
           {results.map((result, index) => (
             <button

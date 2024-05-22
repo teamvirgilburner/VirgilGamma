@@ -9,7 +9,8 @@
 }
 
 .life-chapters-container {
-  margin: 8% 4%;
+  margin: 4% 4%;
+  overflow: hidden;
 }
 
 .tab-button:hover {
@@ -201,7 +202,8 @@
 .family-tree-photo {
   height: 85%;
   width: auto;
-  margin-top: 2%;
+  margin-top: 1%;
+  overflow: hidden;
 }
 
 .white-box-holder {

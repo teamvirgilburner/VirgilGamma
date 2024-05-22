@@ -35,16 +35,17 @@
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1.1vw;
 }
+
 .carousel-card-body {
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: left;
   text-align: center;
-  min-height: 150px;
-  max-width: 350px;
+  min-height: 80%;
+  max-width: 100%;
   margin-left: 25px;
   margin-right: 25px;
   margin-top: 10px;
@@ -56,12 +57,12 @@ h3 {
   align-items: left;
   text-align: left;
   margin-left: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12%;
   height: 125px;
 }
 
 .bulleted {
-  font-size: 14px;
+  font-size: 0.8vw;
 }
 
 .bulleted::before {
